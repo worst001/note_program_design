@@ -1,0 +1,2208 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Markdown/README/emoji/">
+      
+      
+        <link rel="next" href="../user_manual-2.4.0.pdf">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>Vim 自用笔记 - 程序与设计</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vim" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="程序与设计" class="md-header__button md-logo" aria-label="程序与设计" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            程序与设计
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vim 自用笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="程序与设计" class="md-nav__button md-logo" aria-label="程序与设计" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    程序与设计
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/README/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本语法与用法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/README/emoji/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    表情emoji
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://markdown.com.cn/basic-syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    官方教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.mkdocs.org/getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Latex
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Latex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.yuque.com/hanwenhao-bs03y/tncnv7/iy0aay0hgghfhqgn?singleDoc# 《Latex》" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex 自用脑图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://albertyzp.github.io/2019/10/15/LaTex%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/#%E4%B8%80-latex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex 中文手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Matlab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Matlab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ww2.mathworks.cn/help/matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab 官方手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://louiszhai.github.io/2017/09/30/tmux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tmux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Vim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Vim 自用笔记
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Vim 自用笔记
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    简介
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim_1" class="md-nav__link">
+    什么是 Vim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim_2" class="md-nav__link">
+    Vim 能做什么
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基础语法
+  </a>
+  
+    <nav class="md-nav" aria-label="基础语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    设置
+  </a>
+  
+    <nav class="md-nav" aria-label="设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    系统设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    模式
+  </a>
+  
+    <nav class="md-nav" aria-label="模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    几种模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    模式映射
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    操作符(重点)
+  </a>
+  
+    <nav class="md-nav" aria-label="操作符(重点)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim_3" class="md-nav__link">
+    Vim 键位图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    操作符映射
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    自动命令
+  </a>
+  
+    <nav class="md-nav" aria-label="自动命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    通用语法
+  </a>
+  
+    <nav class="md-nav" aria-label="通用语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    自定义扩展
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    经典功能
+  </a>
+  
+    <nav class="md-nav" aria-label="经典功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    列向选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    查询与替换
+  </a>
+  
+    <nav class="md-nav" aria-label="查询与替换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    查询
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    替换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    宏录制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    模板组件
+  </a>
+  
+    <nav class="md-nav" aria-label="模板组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim_4" class="md-nav__link">
+    vim自带模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snips" class="md-nav__link">
+    snips方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fzf" class="md-nav__link">
+    FZF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    生态
+  </a>
+  
+    <nav class="md-nav" aria-label="生态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    插件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    终端工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    当前的最优解决方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim_5" class="md-nav__link">
+    自用 Vim 配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    目录结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_manual-2.4.0.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim 手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/worst001/vim_0" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自用 Vim 配置备份
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    配套工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            配套工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/neovim/neovim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NeoVim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/neoclide/coc.nvim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CocNvim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/nvim-telescope/telescope.nvim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packer与Telescope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/junegunn/fzf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FZF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/kamiyaa/joshuto" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Joshuto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/puremourning/vimspector" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VimSpector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Emacs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Emacs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.spacemacs.org/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpaceEmacs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://oneforalone.github.io/cl-cookbook-cn/#/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lisp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://melpa.org/#/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MELPA 中心
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    设计模式
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            设计模式
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自用笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://refactoringguru.cn/design-patterns/catalog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论与详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/DovAmir/awesome-design-patterns" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    各语言模板总览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    简介
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim_1" class="md-nav__link">
+    什么是 Vim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim_2" class="md-nav__link">
+    Vim 能做什么
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基础语法
+  </a>
+  
+    <nav class="md-nav" aria-label="基础语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    设置
+  </a>
+  
+    <nav class="md-nav" aria-label="设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    系统设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    模式
+  </a>
+  
+    <nav class="md-nav" aria-label="模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    几种模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    模式映射
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    操作符(重点)
+  </a>
+  
+    <nav class="md-nav" aria-label="操作符(重点)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim_3" class="md-nav__link">
+    Vim 键位图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    操作符映射
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    自动命令
+  </a>
+  
+    <nav class="md-nav" aria-label="自动命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    通用语法
+  </a>
+  
+    <nav class="md-nav" aria-label="通用语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    自定义扩展
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    经典功能
+  </a>
+  
+    <nav class="md-nav" aria-label="经典功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    列向选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    查询与替换
+  </a>
+  
+    <nav class="md-nav" aria-label="查询与替换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    查询
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    替换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    宏录制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    模板组件
+  </a>
+  
+    <nav class="md-nav" aria-label="模板组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim_4" class="md-nav__link">
+    vim自带模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snips" class="md-nav__link">
+    snips方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fzf" class="md-nav__link">
+    FZF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    生态
+  </a>
+  
+    <nav class="md-nav" aria-label="生态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    插件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    终端工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    当前的最优解决方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim_5" class="md-nav__link">
+    自用 Vim 配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    目录结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="vim">Vim 自用笔记</h1>
+<h2 id="_1">简介</h2>
+<h3 id="vim_1">什么是 Vim</h3>
+<blockquote>
+<p>Vim 本质上就是一款文本编辑器，它在Vi的基础上改进和增加了很多特性。
+Vim本身拥有自己的脚本语言Vimscript
+Vim是高度可定制的文本编辑器，可以使用Vimscript达到高度可定制。
+Vim是开源的自由软件，不收费。
+Vim属于Unix生态</p>
+</blockquote>
+<h3 id="vim_2">Vim 能做什么</h3>
+<blockquote>
+<p>当记事本使用
+代码编写并支持所有语言
+通过shell与其他语言完成各种各样丰富的工作
+(Emacs可以煮咖啡 Vim也能)</p>
+</blockquote>
+<h2 id="_2">基础语法</h2>
+<h3 id="_3">设置</h3>
+<h4 id="_4">配置文件</h4>
+<ol>
+<li>vimrc<blockquote>
+<p>某个Unix用户的家目录下的入口配置文件
+该用户登录后使用该.vimrc的配置文件
+严格意义上.vim结尾的文件才是Vimscript</p>
+</blockquote>
+</li>
+<li>source<blockquote>
+<p>source命令可以立刻加载某个vim脚本</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="_5">系统设置</h4>
+<ol>
+<li>
+<p>系统字段</p>
+<blockquote>
+<p>filetype  文件类型识别
+set       设置vim内置的功能
+syntax    语法高亮</p>
+</blockquote>
+</li>
+<li>
+<p>示例
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">:</span><span class="k">filetype</span> <span class="k">on</span>                                    <span class="c">&quot; 文件类型识别开启</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">:</span><span class="k">filetype</span> indent <span class="k">on</span>                             <span class="c">&quot; 开启缩进</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">:</span><span class="k">filetype</span> plugin <span class="k">on</span>                             <span class="c">&quot; 开启插件</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">:</span><span class="k">set</span> <span class="nb">fencs</span><span class="p">=</span>utf<span class="m">-8</span><span class="p">,</span>chinese <span class="nb">fenc</span><span class="p">=</span>utf<span class="m">-8</span> <span class="nb">enc</span><span class="p">=</span>utf<span class="m">-8</span>   <span class="c">&quot; 编码设置成UTF-8</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">:</span><span class="nb">syntax</span> <span class="k">on</span>                                      <span class="c">&quot; 代码高亮</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>augroup basic
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  autocmd<span class="p">!</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">let</span> &amp;<span class="nb">t_ut</span><span class="p">=</span><span class="s1">&#39;&#39;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">expandtab</span>          <span class="c">&quot; tab转化成空格</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">smarttab</span>           <span class="c">&quot; 智能判断缩进的空格数</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">autoindent</span>         <span class="c">&quot; 自动缩进</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="k">number</span>             <span class="c">&quot; 开启行号</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">relativenumber</span>     <span class="c">&quot; 开启相对行号</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  autocmd <span class="nb">BufReadPost</span> * <span class="k">if</span> line<span class="p">(</span><span class="s2">&quot;&#39;\&quot;&quot;</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span> &amp;&amp; line<span class="p">(</span><span class="s2">&quot;&#39;\&quot;&quot;</span><span class="p">)</span> <span class="p">&lt;=</span> line<span class="p">(</span><span class="s2">&quot;$&quot;</span><span class="p">)</span> <span class="p">|</span> exe <span class="s2">&quot;normal! g&#39;\&quot;&quot;</span> <span class="p">|</span> <span class="k">endif</span> <span class="c">&quot; 记录上一次文件抒写点</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>augroup END
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">set</span> <span class="nb">mouse</span><span class="p">=</span><span class="k">a</span>                   <span class="c">&quot; 开启鼠标控制</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="k">set</span> <span class="nb">cursorline</span>                <span class="c">&quot; 光标所处行高亮</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c">&quot; set cursorcolumn            &quot; 光标所处列高亮</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">set</span> <span class="nb">guicursor</span><span class="p">=</span><span class="k">i</span>:ver50<span class="p">-</span>iCursor<span class="p">-</span>blinkon1<span class="p">,</span><span class="k">n</span><span class="p">-</span><span class="k">c</span><span class="p">-</span><span class="k">v</span>:block<span class="p">-</span>ncvCursor<span class="p">-</span>blinkoff1  <span class="c">&quot; 光标normal模式时静止, insert模式闪烁</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">set</span> <span class="nb">list</span>                      <span class="c">&quot; 显示特殊字符</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">set</span> <span class="nb">nowrap</span>                    <span class="c">&quot; 越界的行不换行</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">set</span> <span class="nb">foldmethod</span><span class="p">=</span>indent         <span class="c">&quot; 按照缩进的方式进行折叠</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">set</span> <span class="nb">foldlevel</span><span class="p">=</span><span class="m">99</span>              <span class="c">&quot; 折叠等级设置为99</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">set</span> <span class="nb">foldenable</span>                <span class="c">&quot; 开启折叠</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">set</span> <span class="nb">hlsearch</span>                  <span class="c">&quot; 高亮查询的结果</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="k">set</span> <span class="nb">incsearch</span>                 <span class="c">&quot; 在输入搜索字符时就高亮</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="k">set</span> <span class="nb">ignorecase</span>                <span class="c">&quot; 忽略大小写</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="k">set</span> <span class="nb">smartcase</span>                 <span class="c">&quot; 如果包含大写就区分大小写</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="k">set</span> <span class="nb">scrolloff</span><span class="p">=</span><span class="m">5</span>               <span class="c">&quot; 滚动激活的边距</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="k">set</span> <span class="nb">listchars</span><span class="p">=</span><span class="k">tab</span>:▸\ <span class="p">,</span>trail:▫ <span class="c">&quot; 特殊字符展示的效果</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="k">set</span> <span class="nb">laststatus</span><span class="p">=</span><span class="m">2</span>              <span class="c">&quot; 开启状态行</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="_6">模式</h3>
+<h4 id="_7">几种模式</h4>
+<ol>
+<li>
+<p>普通模式 normal
+可以认为是浏览模式 光标可以自由的移动 这个模式下有大量的<em>操作符</em>可以使用</p>
+</li>
+<li>
+<p>插入模式 insert
+手动输入字符 光标随着输入的字符后移</p>
+</li>
+<li>
+<p>可视模式 visual
+光标移动时会框选区域 对框选某一个区域也可做处理</p>
+</li>
+<li>
+<p>替换模式 replace
+每次输入都会覆盖之前的字符(不常用)</p>
+</li>
+</ol>
+<h4 id="_8">模式映射</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">:</span><span class="k">let</span> mapleader<span class="p">=</span><span class="s2">&quot;\&lt;Space&gt;&quot;</span>       <span class="c">&quot; 操作前缀</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c">&quot; normal 模式</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">:</span><span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>sx  :source %<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">:</span><span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span>yp  :<span class="k">let</span> @<span class="p">+</span> <span class="p">=</span> expand<span class="p">(</span><span class="s1">&#39;%:p:h&#39;</span><span class="p">)&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c">&quot; insert 模式</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">:</span><span class="nb">inoremap</span> jk          <span class="p">&lt;</span>esc<span class="p">&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c">&quot; visual 模式</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">:</span><span class="nb">vnoremap</span> K           <span class="m">9</span>k
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c">&quot; visual 和 normal都执行</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c">&quot;:noremap  K           9k</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">:</span><span class="nb">noremap</span>  J           <span class="m">9</span>j
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">:</span><span class="nb">noremap</span>  L           <span class="m">12</span>l
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">:</span><span class="nb">noremap</span>  H           <span class="m">12</span>h
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">:</span><span class="nb">noremap</span>  S           :<span class="k">w</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">:</span><span class="nb">noremap</span>  <span class="p">--</span>          :<span class="k">join</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_9">操作符(重点)</h3>
+<h4 id="vim_3">Vim 键位图</h4>
+<p><img alt="键位图" src="../vim%E6%93%8D%E4%BD%9C%E9%94%AE%E4%BD%8D%E5%9B%BE.png" /></p>
+<h4 id="_10">操作符映射</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">:</span>onoremap <span class="k">i</span><span class="p">(</span>          :<span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">u</span><span class="p">&gt;</span>normal<span class="p">!</span>   <span class="k">f</span><span class="p">(</span><span class="k">vi</span><span class="p">(&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">:</span>onoremap <span class="k">i</span>[          :<span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">u</span><span class="p">&gt;</span>normal<span class="p">!</span>   <span class="k">f</span>[<span class="k">vi</span>[<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">:</span>onoremap <span class="k">i</span>{          :<span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">u</span><span class="p">&gt;</span>normal<span class="p">!</span>   <span class="k">f</span>{<span class="k">vi</span>{<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c">&quot;aaaaa(bbb-ccccc)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c">&quot;aaaaa[bbb-ccccc]</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c">&quot;aaaaa{bbb-ccccc}</span>
+</code></pre></div>
+<h3 id="_11">自动命令</h3>
+<h4 id="_12">定义</h4>
+<p>打开vim时自动执行某些命令</p>
+<h4 id="_13">示例</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>augroup filetype_vim
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  autocmd<span class="p">!</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  autocmd <span class="nb">FileType</span> <span class="k">vim</span>  :<span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">2</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  autocmd <span class="nb">FileType</span> <span class="k">vim</span>  :<span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">2</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  autocmd <span class="nb">FileType</span> <span class="k">vim</span>  :<span class="k">set</span> <span class="nb">softtabstop</span><span class="p">=</span><span class="m">2</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>augroup END
+</code></pre></div>
+<h3 id="_14">通用语法</h3>
+<h4 id="_15">变量</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">:</span><span class="k">let</span> <span class="k">g</span>:hello <span class="p">=</span> <span class="s2">&quot;world&quot;</span> <span class="c">&quot;全局变量</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">:</span><span class="k">let</span> <span class="k">b</span>:hello <span class="p">=</span> <span class="s2">&quot;world&quot;</span> <span class="c">&quot;当前缓冲区(当前文件)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">function</span><span class="p">!</span> SomeFunc<span class="p">(</span>hello<span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c">    &quot; 局部变量</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    echo <span class="k">a</span>:hello
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">endfunction</span>
+</code></pre></div>
+<h4 id="_16">流程</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c">&quot; 条件语句</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">:</span><span class="k">if</span> <span class="m">10</span> <span class="p">&gt;</span> <span class="m">1</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">:</span>    <span class="k">echom</span> <span class="s2">&quot;foo&quot;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">:</span><span class="k">endif</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c">&quot; 循环语句</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">:</span><span class="k">let</span> <span class="k">c</span> <span class="p">=</span> <span class="m">0</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">:</span><span class="k">for</span> <span class="k">i</span> <span class="k">in</span> [<span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span>]
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">:</span>  <span class="k">let</span> <span class="k">c</span> <span class="p">+=</span> <span class="k">i</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">:</span><span class="k">endfor</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">:</span><span class="k">echom</span> <span class="k">c</span>
+</code></pre></div>
+<h4 id="_17">函数</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>jd   :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>SomeFunc<span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">function</span><span class="p">!</span> s:SomeFunc<span class="p">(</span>hello<span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    echo <span class="k">a</span>:hello
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">endfunction</span>
+</code></pre></div>
+<h3 id="_18">自定义扩展</h3>
+<blockquote>
+<p>熟悉vim基本语法之后就可以自己定制插件
+插件封装在 .vim/plugin 路径下
+history 插件展示</p>
+</blockquote>
+<h2 id="_19">经典功能</h2>
+<h3 id="_20">列向选择</h3>
+<p><c-v> 可以进入列向选择
+当某一行内容发生了变化剩余的所有行都有同样变化</p>
+<h3 id="_21">查询与替换</h3>
+<h4 id="_22">查询</h4>
+<p>/ 开始向下查询
+? 开始向上查询
+n 下一个匹配
+N 上一个匹配</p>
+<h4 id="_23">替换</h4>
+<p>:s 部分替换
+:%s 全局替换</p>
+<h3 id="_24">宏录制</h3>
+<p>normal 模式下按 q 作为录制前缀
+配合任意字母(比如a)
+那么在a这个寄存器中将记录接下来的录制
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>aaa<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>bbb<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>ccc<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>ddd<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>eee<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>aaa
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>bbb
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>ccc
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>ddd
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>eee
+</code></pre></div></p>
+<h3 id="_25">模板组件</h3>
+<h4 id="vim_4">vim自带模板</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">:</span>iabbrev @@  hanwenhao@mail.xiyouwangluo.<span class="k">top</span>
+</code></pre></div>
+<h4 id="snips">snips方案</h4>
+<ul>
+<li>完整的代码块方案</li>
+<li>每种开发工具都有自己的代码块方案</li>
+<li>本质上是对代码文件做处理</li>
+<li>可以基于python进一步做扩展<ul>
+<li>http://vimcasts.org/episodes/ultisnips-python-interpolation/</li>
+</ul>
+</li>
+<li>自用python扩展示例</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>global !p
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>def list_params(params):
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    list = params.split(&#39;,&#39;)
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    link = &quot;&quot;
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    initial_indent = snip._initial_indent
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    for it in list:
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        it = &quot;\n&quot; + initial_indent + &quot;* @param &quot; + it.strip() + &quot; &lt;+Comment+&gt;&quot;
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        link = link + it
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    return &quot;*&quot; + link
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>endglobal
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>snippet ff &quot;Java Easy func&quot; b
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>/**
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>* `!p snip.rv = t[3][0].upper()  + t[3][1:]`
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>* ${6:&lt;+Description+&gt;}
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>`!p snip.rv = list_params(t[4])`
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>*
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>* @return ${5:&lt;+Return+&gt;}
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>*/
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>${1:public} ${2:void} ${3:funcname} (${4}) {
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    ${7}
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>}
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>endsnippet
+</code></pre></div>
+<h3 id="fzf">FZF</h3>
+<ul>
+<li>一款基于Unix的模糊查询工具</li>
+<li>用Go语言编写性能有很大的保障</li>
+<li>Windows也适配</li>
+<li>底层文件、文本引擎选择<ul>
+<li>传统的 find、ack 较慢</li>
+<li>fd 文件查找速度最快</li>
+<li>ag 巨量代码搜索非常快</li>
+<li>rg 不亚于ag且对中文支持很好</li>
+</ul>
+</li>
+</ul>
+<h2 id="_26">生态</h2>
+<h3 id="_27">插件</h3>
+<ul>
+<li>idea<ul>
+<li>ideavim</li>
+<li>可以通过.ideavimrc 以及actionList查看idea提供的vim命令</li>
+</ul>
+</li>
+<li>eclipse<ul>
+<li>vrapper</li>
+<li>viplugin</li>
+</ul>
+</li>
+<li>vscode<ul>
+<li>VimL</li>
+</ul>
+</li>
+</ul>
+<h3 id="_28">终端工具</h3>
+<ul>
+<li>tmux<ul>
+<li>linux上的终端管理利器</li>
+</ul>
+</li>
+<li>ranger<ul>
+<li>unix上的以终端形式存在的文件管理利器</li>
+</ul>
+</li>
+</ul>
+<h3 id="_29">当前的最优解决方案</h3>
+<ul>
+<li>neovim<ul>
+<li>无缝支持python2、python3、nodejs、ruby、lua</li>
+<li>可以通过shell调用go、java、c++这些语言编译后的执行文件</li>
+</ul>
+</li>
+</ul>
+<h3 id="vim_5">自用 Vim 配置</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c">&quot;-------------------------------------------------------</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c">&quot; _   _                               _                 </span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c">&quot;| | | | __ _ _ ____      _____ _ __ | |__   __ _  ___  </span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c">&quot;| |_| |/ _` | &#39;_ \ \ /\ / / _ \ &#39;_ \| &#39;_ \ / _` |/ _ \ </span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c">&quot;|  _  | (_| | | | \ V  V /  __/ | | | | | | (_| | (_) |</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c">&quot;|_| |_|\__,_|_| |_|\_/\_/ \___|_| |_|_| |_|\__,_|\___/ </span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c">&quot;                                                       </span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c">&quot;__     ___                    </span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c">&quot;\ \   / (_)_ __ ___  _ __ ___ </span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c">&quot; \ \ / /| | &#39;_ ` _ \| &#39;__/ __|</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c">&quot;  \ V / | | | | | | | | | (__ </span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c">&quot;   \_/  |_|_| |_| |_|_|  \___|</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c">&quot;                              </span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c">&quot; SYS ENV ---------------------- {{{</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c">&quot; Environment {</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="c">    &quot; Identify platform {</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>        <span class="k">silent</span> <span class="k">function</span><span class="p">!</span> OSX<span class="p">()</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>            <span class="k">return</span> has<span class="p">(</span><span class="s1">&#39;macunix&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>        <span class="k">endfunction</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>        <span class="k">silent</span> <span class="k">function</span><span class="p">!</span> LINUX<span class="p">()</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>            <span class="k">return</span> has<span class="p">(</span><span class="s1">&#39;unix&#39;</span><span class="p">)</span> &amp;&amp; <span class="p">!</span>has<span class="p">(</span><span class="s1">&#39;macunix&#39;</span><span class="p">)</span> &amp;&amp; <span class="p">!</span>has<span class="p">(</span><span class="s1">&#39;win32unix&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>        <span class="k">endfunction</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>        <span class="k">silent</span> <span class="k">function</span><span class="p">!</span> WINDOWS<span class="p">()</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>            <span class="k">return</span>  <span class="p">(</span>has<span class="p">(</span><span class="s1">&#39;win32&#39;</span><span class="p">)</span> <span class="p">||</span> has<span class="p">(</span><span class="s1">&#39;win64&#39;</span><span class="p">))</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>        <span class="k">endfunction</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="c">    &quot; }</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="c">    &quot; Basics {</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>        <span class="k">set</span> <span class="nb">nocompatible</span>        <span class="c">&quot; Must be first line</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>        <span class="k">if</span> <span class="p">!</span>WINDOWS<span class="p">()</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>            <span class="k">set</span> <span class="k">shell</span><span class="p">=</span><span class="sr">/bin/</span>zsh
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>        <span class="k">endif</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="c">    &quot; }</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="c">    &quot; Windows Compatible {</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="c">        &quot; On Windows, also use &#39;.vim&#39; instead of &#39;vimfiles&#39;; this makes synchronization</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="c">        &quot; across (heterogeneous) systems easier.</span>
+<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>        <span class="k">if</span> WINDOWS<span class="p">()</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>          <span class="k">set</span> <span class="nb">runtimepath</span><span class="p">=</span>$HOME<span class="sr">/.vim,$VIM/</span>vimfiles<span class="p">,</span>$VIMRUNTIME<span class="p">,</span>$VIM<span class="sr">/vimfiles/</span>after<span class="p">,</span>$HOME<span class="sr">/.vim/</span>after
+<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>        <span class="k">endif</span>
+<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="c">    &quot; }</span>
+<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>
+<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="c">    &quot; vim-autoclose不生效的Fix {</span>
+<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="c">        &quot; https://github.com/spf13/spf13-vim/issues/780</span>
+<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>        <span class="k">if</span> &amp;<span class="nb">term</span>[:<span class="m">4</span>] <span class="p">==</span> <span class="s2">&quot;xterm&quot;</span> <span class="p">||</span> &amp;<span class="nb">term</span>[:<span class="m">5</span>] <span class="p">==</span> <span class="s1">&#39;screen&#39;</span> <span class="p">||</span> &amp;<span class="nb">term</span>[:<span class="m">3</span>] <span class="p">==</span> <span class="s1">&#39;rxvt&#39;</span>
+<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a>            <span class="nb">inoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span>[<span class="p">&gt;</span>OC <span class="p">&lt;</span>RIGHT<span class="p">&gt;</span>
+<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a>        <span class="k">endif</span>
+<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a><span class="c">    &quot; }</span>
+<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a><span class="c">&quot; }</span>
+<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a>
+<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="c">&quot; System ---------------------- {{{</span>
+<a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a><span class="p">:</span><span class="k">filetype</span> <span class="k">on</span>
+<a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a><span class="p">:</span><span class="k">filetype</span> indent <span class="k">on</span>
+<a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a><span class="p">:</span><span class="k">filetype</span> plugin <span class="k">on</span>
+<a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a><span class="p">:</span><span class="k">set</span> <span class="nb">fencs</span><span class="p">=</span>utf<span class="m">-8</span><span class="p">,</span>chinese <span class="nb">fenc</span><span class="p">=</span>utf<span class="m">-8</span> <span class="nb">enc</span><span class="p">=</span>utf<span class="m">-8</span>
+<a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a><span class="p">:</span><span class="k">set</span> <span class="nb">fileencodings</span><span class="p">=</span>utf<span class="m">-8</span><span class="p">,</span>ucs<span class="p">-</span>bom<span class="p">,</span>gb18030<span class="p">,</span>gbk<span class="p">,</span>gb2312<span class="p">,</span>cp936
+<a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a><span class="p">:</span><span class="k">set</span> <span class="nb">termencoding</span><span class="p">=</span>utf<span class="m">-8</span>
+<a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a>
+<a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a><span class="p">:</span><span class="nb">syntax</span> <span class="k">on</span>
+<a id="__codelineno-10-61" name="__codelineno-10-61" href="#__codelineno-10-61"></a><span class="p">:</span><span class="k">let</span> <span class="k">g</span>:python_host_prog  <span class="p">=</span> <span class="s1">&#39;/usr/local/bin/python2&#39;</span>
+<a id="__codelineno-10-62" name="__codelineno-10-62" href="#__codelineno-10-62"></a><span class="p">:</span><span class="k">let</span> <span class="k">g</span>:python3_host_prog <span class="p">=</span> <span class="s1">&#39;/opt/homebrew/opt/python@3.10/bin/python3.10&#39;</span>
+<a id="__codelineno-10-63" name="__codelineno-10-63" href="#__codelineno-10-63"></a><span class="p">:</span><span class="k">let</span> <span class="k">g</span>:ruby_host_prog    <span class="p">=</span> <span class="s1">&#39;/opt/homebrew/lib/ruby/gems/3.1.0/bin/neovim-ruby-host&#39;</span>
+<a id="__codelineno-10-64" name="__codelineno-10-64" href="#__codelineno-10-64"></a>
+<a id="__codelineno-10-65" name="__codelineno-10-65" href="#__codelineno-10-65"></a>
+<a id="__codelineno-10-66" name="__codelineno-10-66" href="#__codelineno-10-66"></a>
+<a id="__codelineno-10-67" name="__codelineno-10-67" href="#__codelineno-10-67"></a><span class="c">&quot; 插件镜像地址修改</span>
+<a id="__codelineno-10-68" name="__codelineno-10-68" href="#__codelineno-10-68"></a><span class="c">&quot; :let g:plug_url_format   = &#39;https://git::@github.com.cnpmjs.org/%s.git&#39;</span>
+<a id="__codelineno-10-69" name="__codelineno-10-69" href="#__codelineno-10-69"></a><span class="c">&quot; }}}</span>
+<a id="__codelineno-10-70" name="__codelineno-10-70" href="#__codelineno-10-70"></a>
+<a id="__codelineno-10-71" name="__codelineno-10-71" href="#__codelineno-10-71"></a><span class="k">let</span> <span class="k">g</span>:vimspector_enable_mappings <span class="p">=</span> <span class="s1">&#39;HUMAN&#39;</span>
+<a id="__codelineno-10-72" name="__codelineno-10-72" href="#__codelineno-10-72"></a>packadd<span class="p">!</span> vimspector
+<a id="__codelineno-10-73" name="__codelineno-10-73" href="#__codelineno-10-73"></a>
+<a id="__codelineno-10-74" name="__codelineno-10-74" href="#__codelineno-10-74"></a>
+<a id="__codelineno-10-75" name="__codelineno-10-75" href="#__codelineno-10-75"></a><span class="c">&quot; Basic ---------------------- {{{</span>
+<a id="__codelineno-10-76" name="__codelineno-10-76" href="#__codelineno-10-76"></a>augroup basic
+<a id="__codelineno-10-77" name="__codelineno-10-77" href="#__codelineno-10-77"></a>  autocmd<span class="p">!</span>
+<a id="__codelineno-10-78" name="__codelineno-10-78" href="#__codelineno-10-78"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">let</span> &amp;<span class="nb">t_ut</span><span class="p">=</span><span class="s1">&#39;&#39;</span>
+<a id="__codelineno-10-79" name="__codelineno-10-79" href="#__codelineno-10-79"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">expandtab</span>
+<a id="__codelineno-10-80" name="__codelineno-10-80" href="#__codelineno-10-80"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">smarttab</span>
+<a id="__codelineno-10-81" name="__codelineno-10-81" href="#__codelineno-10-81"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">autoindent</span>
+<a id="__codelineno-10-82" name="__codelineno-10-82" href="#__codelineno-10-82"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="k">number</span>
+<a id="__codelineno-10-83" name="__codelineno-10-83" href="#__codelineno-10-83"></a>  autocmd <span class="nb">BufReadPost</span> * :<span class="k">set</span> <span class="nb">relativenumber</span>
+<a id="__codelineno-10-84" name="__codelineno-10-84" href="#__codelineno-10-84"></a>  autocmd <span class="nb">BufReadPost</span> * <span class="k">if</span> line<span class="p">(</span><span class="s2">&quot;&#39;\&quot;&quot;</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span> &amp;&amp; line<span class="p">(</span><span class="s2">&quot;&#39;\&quot;&quot;</span><span class="p">)</span> <span class="p">&lt;=</span> line<span class="p">(</span><span class="s2">&quot;$&quot;</span><span class="p">)</span> <span class="p">|</span> exe <span class="s2">&quot;normal! g&#39;\&quot;&quot;</span> <span class="p">|</span> <span class="k">endif</span>
+<a id="__codelineno-10-85" name="__codelineno-10-85" href="#__codelineno-10-85"></a>augroup END
+<a id="__codelineno-10-86" name="__codelineno-10-86" href="#__codelineno-10-86"></a><span class="c">&quot; }}}</span>
+<a id="__codelineno-10-87" name="__codelineno-10-87" href="#__codelineno-10-87"></a>
+<a id="__codelineno-10-88" name="__codelineno-10-88" href="#__codelineno-10-88"></a><span class="c">&quot; 插件包引入(vim-plug)</span>
+<a id="__codelineno-10-89" name="__codelineno-10-89" href="#__codelineno-10-89"></a><span class="p">:</span>source $HOME<span class="sr">/.vim/</span>init/init<span class="p">-</span>packages.<span class="k">vim</span>
+<a id="__codelineno-10-90" name="__codelineno-10-90" href="#__codelineno-10-90"></a><span class="c">&quot; UI 配置(TODO: 必须跟在package后 否则ui配置不生效)</span>
+<a id="__codelineno-10-91" name="__codelineno-10-91" href="#__codelineno-10-91"></a><span class="p">:</span>source $HOME<span class="sr">/.vim/</span>init/init<span class="p">-</span>ui.<span class="k">vim</span>
+<a id="__codelineno-10-92" name="__codelineno-10-92" href="#__codelineno-10-92"></a><span class="c">&quot; Lua 插件包引入(packer)</span>
+<a id="__codelineno-10-93" name="__codelineno-10-93" href="#__codelineno-10-93"></a><span class="p">:</span>source $HOME<span class="sr">/.vim/</span>init/init<span class="p">-</span>packer.<span class="k">vim</span>
+<a id="__codelineno-10-94" name="__codelineno-10-94" href="#__codelineno-10-94"></a><span class="c">&quot; 插件配置</span>
+<a id="__codelineno-10-95" name="__codelineno-10-95" href="#__codelineno-10-95"></a><span class="p">:</span>source $HOME<span class="sr">/.vim/</span>init/init<span class="p">-</span>better<span class="p">-</span>defaults.<span class="k">vim</span>
+<a id="__codelineno-10-96" name="__codelineno-10-96" href="#__codelineno-10-96"></a><span class="c">&quot; 按键映射</span>
+<a id="__codelineno-10-97" name="__codelineno-10-97" href="#__codelineno-10-97"></a><span class="p">:</span>source $HOME<span class="sr">/.vim/</span>init/init<span class="p">-</span>keybindings.<span class="k">vim</span>
+<a id="__codelineno-10-98" name="__codelineno-10-98" href="#__codelineno-10-98"></a><span class="c">&quot; 自定义辅助</span>
+<a id="__codelineno-10-99" name="__codelineno-10-99" href="#__codelineno-10-99"></a><span class="p">:</span>source $HOME<span class="sr">/.vim/</span>init/init<span class="p">-</span>assist.<span class="k">vim</span>
+<a id="__codelineno-10-100" name="__codelineno-10-100" href="#__codelineno-10-100"></a>
+<a id="__codelineno-10-101" name="__codelineno-10-101" href="#__codelineno-10-101"></a><span class="c">&quot; }}}</span>
+</code></pre></div>
+<h3 id="_30">目录结构</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>.vim
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>├── README.md
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>├── autoload
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>│   ├── dbext.vim.bak
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>│   ├── dbext_dbi.vim.bak
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>│   ├── plug.vim
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>│   └── plug.vim.old
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>├── coc-settings.json
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>├── init
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>│   ├── config
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>│   │   └── db.vim
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>│   ├── init-assist.vim
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>│   ├── init-better-defaults.vim
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>│   ├── init-keybindings.vim
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>│   ├── init-packages.vim
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>│   ├── init-packer.vim
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>│   ├── init-ui.vim
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>│   └── new
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>├── init.vim -&gt; /Users/hanwenhao/.vim/vimrc
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>├── lua
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>│   ├── plugin-config
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>│   │   ├── bufferline.lua
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>│   │   ├── nvim-tree.lua
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>│   │   ├── persisted.lua
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>│   │   ├── telescope.lua
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>│   │   └── todo-comments.lua
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>│   └── plugins.lua
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>├── pack
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>│   └── vimspector
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>│       └── opt
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>├── package-lock.json
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>├── plugged
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>├── plugin
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>│   ├── terminal-open.vim
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>│   ├── text-highlight.vim
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>│   └── vimcdoc.vim
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>├── sessions
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>│   └── default.vim
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>├── shell
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>│   ├── prettier
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>│   ├── scalafix
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>│   ├── time
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>│   ├── uncrustify
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>│   ├── xml-prettier
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>│   └── xml2js
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>├── syntax
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>│   └── help_cn.vim
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>├── tree.txt
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>└── vimrc
+</code></pre></div>
+<p><a href="https://github.com/worst001/vim_0">Vim 配置仓库地址</a></p>
+<h2 id="_31">总结</h2>
+<ul>
+<li>也不是说用vim其他开发工具就不要了，他有强大的近乎完美编辑功能。</li>
+<li>配合其他工具一起使用，可以发挥更大功效。</li>
+<li>他像"我的世界"一样可以打造自己的房子，对程序设计着来说有很大的帮助。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

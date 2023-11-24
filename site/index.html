@@ -1,0 +1,2597 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="Markdown/README/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>程序与设计</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markdown" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="程序与设计" class="md-header__button md-logo" aria-label="程序与设计" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            程序与设计
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="程序与设计" class="md-nav__button md-logo" aria-label="程序与设计" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    程序与设计
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    主要特点和常用语法
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和常用语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    简洁易读
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    标题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    段落和换行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    强调和斜体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    链接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    图片
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    引用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    代码块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    分割线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latex" class="md-nav__link">
+    Latex
+  </a>
+  
+    <nav class="md-nav" aria-label="Latex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    主要特点和常用语法
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和常用语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    强大的数学公式支持
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    结构化文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    专业的排版效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    参考文献管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    图片和表格插入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    自定义样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    跨平台和开源
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab" class="md-nav__link">
+    Matlab
+  </a>
+  
+    <nav class="md-nav" aria-label="Matlab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    数值计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    数据可视化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    算法开发
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    数据处理和分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    应用开发
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    工具箱和函数库
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    Tmux
+  </a>
+  
+    <nav class="md-nav" aria-label="Tmux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    多窗格布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    会话管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    分离和重连
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    窗口和标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    自定义配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    Vim
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    参考文档
+  </a>
+  
+    <nav class="md-nav" aria-label="参考文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    自用配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    配套工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    快速移动和编辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    可定制性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    强大的搜索和替换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    分割窗口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    多语言支持
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    远程编辑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emacs" class="md-nav__link">
+    Emacs
+  </a>
+  
+    <nav class="md-nav" aria-label="Emacs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    文本编辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    扩展性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    多窗口和分割窗格
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    代码编辑和调试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    文件管理和版本控制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    文档查阅和阅读
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    电子邮件和日历
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    设计模式
+  </a>
+  
+    <nav class="md-nav" aria-label="设计模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    基本介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="基本介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    设计模式通常被分成三类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    创建型模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    结构型模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    行为型模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Markdown/README/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本语法与用法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Markdown/README/emoji/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    表情emoji
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://markdown.com.cn/basic-syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    官方教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.mkdocs.org/getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Latex
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Latex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.yuque.com/hanwenhao-bs03y/tncnv7/iy0aay0hgghfhqgn?singleDoc# 《Latex》" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex 自用脑图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://albertyzp.github.io/2019/10/15/LaTex%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/#%E4%B8%80-latex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex 中文手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Matlab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Matlab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ww2.mathworks.cn/help/matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab 官方手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://louiszhai.github.io/2017/09/30/tmux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tmux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Vim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Vim/Vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim 自用笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Vim/user_manual-2.4.0.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim 手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/worst001/vim_0" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自用 Vim 配置备份
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    配套工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            配套工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/neovim/neovim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NeoVim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/neoclide/coc.nvim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CocNvim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/nvim-telescope/telescope.nvim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packer与Telescope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/junegunn/fzf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FZF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/kamiyaa/joshuto" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Joshuto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/puremourning/vimspector" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VimSpector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Emacs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Emacs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.spacemacs.org/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpaceEmacs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://oneforalone.github.io/cl-cookbook-cn/#/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lisp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://melpa.org/#/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MELPA 中心
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    设计模式
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            设计模式
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自用笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://refactoringguru.cn/design-patterns/catalog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论与详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/DovAmir/awesome-design-patterns" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    各语言模板总览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    主要特点和常用语法
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和常用语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    简洁易读
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    标题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    段落和换行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    强调和斜体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    链接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    图片
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    引用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    代码块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    分割线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latex" class="md-nav__link">
+    Latex
+  </a>
+  
+    <nav class="md-nav" aria-label="Latex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    主要特点和常用语法
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和常用语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    强大的数学公式支持
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    结构化文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    专业的排版效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    参考文献管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    图片和表格插入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    自定义样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    跨平台和开源
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab" class="md-nav__link">
+    Matlab
+  </a>
+  
+    <nav class="md-nav" aria-label="Matlab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    数值计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    数据可视化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    算法开发
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    数据处理和分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    应用开发
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    工具箱和函数库
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    Tmux
+  </a>
+  
+    <nav class="md-nav" aria-label="Tmux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    多窗格布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    会话管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    分离和重连
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    窗口和标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    自定义配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    Vim
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    参考文档
+  </a>
+  
+    <nav class="md-nav" aria-label="参考文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    自用配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    配套工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    快速移动和编辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    可定制性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    强大的搜索和替换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    分割窗口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    多语言支持
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    远程编辑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emacs" class="md-nav__link">
+    Emacs
+  </a>
+  
+    <nav class="md-nav" aria-label="Emacs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    主要特点和功能
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点和功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    文本编辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    扩展性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    多窗口和分割窗格
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    代码编辑和调试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    文件管理和版本控制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    文档查阅和阅读
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    电子邮件和日历
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    设计模式
+  </a>
+  
+    <nav class="md-nav" aria-label="设计模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    基本介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="基本介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    设计模式通常被分成三类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    创建型模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    结构型模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    行为型模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Home</h1>
+
+<h2 id="markdown">Markdown</h2>
+<h3 id="_1">参考文档</h3>
+<p><a href="Markdown/README/">基本语法与用法</a></p>
+<p><a href="Markdown/README/emoji/">表情emoji</a></p>
+<p><a href="https://markdown.com.cn/basic-syntax/">官方教程</a></p>
+<p><a href="https://www.mkdocs.org/getting-started/">mkdocs</a></p>
+<h3 id="_2">基本介绍</h3>
+<p>Markdown是一种轻量级的标记语言，设计用于简化文本的编写和格式化。它使用简单的标记符号来表示文本的结构和样式，具有易读、易写的特点。</p>
+<h3 id="_3">主要特点和常用语法</h3>
+<h4 id="_4">简洁易读</h4>
+<p>Markdown使用纯文本编写，没有复杂的标记和语法，易于阅读和编辑。</p>
+<h4 id="_5">标题</h4>
+<p>使用 # 符号表示标题，数量表示标题级别（例如 # 标题1 表示一级标题）。</p>
+<h4 id="_6">段落和换行</h4>
+<p>使用空行来分隔段落，换行可以通过在行尾添加两个空格或使用 <br> 标签实现。</p>
+<h4 id="_7">强调和斜体</h4>
+<p>使用 * 或 _ 符号包围文本来表示强调或斜体效果。</p>
+<h4 id="_8">链接</h4>
+<p>使用 <code>[链接文本](链接地址)</code> 的格式创建链接，也可以使用 &lt;链接地址&gt; 来创建自动链接。</p>
+<h4 id="_9">图片</h4>
+<p>使用 <code>![替代文本](图片地址)</code> 的格式插入图片。</p>
+<h4 id="_10">列表</h4>
+<p>使用 - 或 * 符号开头表示无序列表，使用数字加.表示有序列表。</p>
+<h4 id="_11">引用</h4>
+<p>使用 &gt; 符号表示引用内容。</p>
+<h4 id="_12">代码块</h4>
+<p>使用反引号 ` 包围单行代码，使用三个反引号 ``` 包围多行代码块。</p>
+<h4 id="_13">分割线</h4>
+<p>使用三个或更多的 -、* 或 _ 符号创建分割线。</p>
+<h3 id="_14">总结</h3>
+<p>Markdown可以用于各种场景，如撰写文档、编写博客、发布文章、编写README文件等。许多平台和编辑器都支持Markdown格式，例如GitHub、Stack Overflow、VS Code等。</p>
+<hr />
+<h2 id="latex">Latex</h2>
+<h3 id="_15">参考文档</h3>
+<p><a href="https://www.yuque.com/hanwenhao-bs03y/tncnv7/iy0aay0hgghfhqgn?singleDoc# 《Latex》">Latex 自用脑图</a></p>
+<p><a href="https://albertyzp.github.io/2019/10/15/LaTex%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/#%E4%B8%80-latex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">Latex 中文手册</a></p>
+<h3 id="_16">基本介绍</h3>
+<p>LaTeX是一种专业的排版系统，用于创建高质量的科技文档、学术论文、书籍、演示文稿等。它基于TeX排版引擎，提供了丰富的功能和灵活的控制选项，使得用户可以通过代码编写来精确控制文档的样式和格式。</p>
+<h3 id="_17">主要特点和常用语法</h3>
+<h4 id="_18">强大的数学公式支持</h4>
+<p>LaTeX在处理数学公式和符号方面非常出色，具有广泛的数学符号库和专业的排版规则。</p>
+<h4 id="_19">结构化文档</h4>
+<p>LaTeX鼓励使用结构化的方式来编写文档，如章节、段落、列表等，并可自动生成目录、参考文献等。</p>
+<h4 id="_20">专业的排版效果</h4>
+<p>LaTeX提供了丰富的排版命令和环境，允许用户对字体、段落、标题、页眉页脚等进行细致的控制，以实现专业的排版效果。</p>
+<h4 id="_21">参考文献管理</h4>
+<p>LaTeX提供了强大的参考文献管理系统（如BibTeX），使得引用和生成参考文献列表变得简单和一致。</p>
+<h4 id="_22">图片和表格插入</h4>
+<p>LaTeX支持插入高质量的图片和表格，并提供了灵活的布局和排列选项。</p>
+<h4 id="_23">自定义样式</h4>
+<p>LaTeX允许用户根据自己的需求和喜好定义自己的样式文件，以适应不同的出版规范和风格要求。</p>
+<h4 id="_24">跨平台和开源</h4>
+<p>LaTeX是跨平台的，可在各种操作系统上运行，并且是开源的，拥有庞大的用户社区和资源支持。</p>
+<h3 id="_25">总结</h3>
+<p>LaTeX使用基于文本的命令语法，通过编写LaTeX代码来生成最终的文档。用户可以使用任何文本编辑器编写LaTeX代码，并使用LaTeX编译器（如pdfTeX、XeTeX、LuaTeX等）将代码编译成PDF或其他格式的文档。</p>
+<p>LaTeX在学术界、科研领域和出版界广泛使用，因为它能够产生高质量、专业的文档，并提供了对复杂数学公式和结构化文档的优秀支持。尽管LaTeX需要一些学习曲线，但一旦掌握，它可以成为一个强大而灵活的工具来创建精美的文档。</p>
+<hr />
+<h2 id="matlab">Matlab</h2>
+<h3 id="_26">参考文档</h3>
+<p><a href="https://ww2.mathworks.cn/help/matlab/">Matlab 官方手册</a></p>
+<h3 id="_27">基本介绍</h3>
+<p>MATLAB是一种强大的数值计算和科学编程环境，常用于工程、科学和数学领域的数据分析、算法开发和可视化。它提供了丰富的工具箱和函数库，使得用户能够进行各种复杂的数值计算、数据处理和模拟实验。</p>
+<h3 id="_28">主要特点和功能</h3>
+<h4 id="_29">数值计算</h4>
+<p>MATLAB具有高效的数值计算引擎，支持矩阵和向量操作、线性代数、统计分析、傅里叶变换等数学运算。</p>
+<h4 id="_30">数据可视化</h4>
+<p>MATLAB提供了强大的绘图和可视化功能，可以创建二维和三维图形、动画、图像处理和交互式界面，以便更好地理解和展示数据。</p>
+<h4 id="_31">算法开发</h4>
+<p>MATLAB是一个优秀的算法开发平台，用户可以通过编写脚本和函数来实现自定义的数值算法、模型仿真和优化问题求解。</p>
+<h4 id="_32">数据处理和分析</h4>
+<p>MATLAB提供了丰富的数据处理和分析工具，如数据预处理、滤波、插值、拟合曲线、分类、聚类等，方便用户对复杂数据进行处理和分析。</p>
+<h4 id="_33">应用开发</h4>
+<p>MATLAB支持应用程序开发，用户可以创建自己的GUI界面、构建完整的应用程序，并与其他编程语言（如C/C++、Python等）进行集成。</p>
+<h4 id="_34">工具箱和函数库</h4>
+<p>MATLAB拥有广泛的工具箱和函数库，包括信号处理、图像处理、控制系统、机器学习、计算生物学、通信等领域的工具，方便用户在特定领域中进行专业的数据分析和建模。</p>
+<h3 id="_35">总结</h3>
+<p>MATLAB使用MATLAB语言进行编程，语法简洁而灵活。用户可以通过命令窗口进行交互式的操作，也可以编写脚本文件（以.m为扩展名）进行批量运行和自动化处理。</p>
+<p>MATLAB在科学研究、工程开发、教育培训等领域得到广泛应用。它的易用性、强大的数值计算能力和丰富的功能使其成为了科学计算和数据分析的首选工具之一。</p>
+<hr />
+<h2 id="tmux">Tmux</h2>
+<h3 id="_36">参考文档</h3>
+<p><a href="https://louiszhai.github.io/2017/09/30/tmux/">Tmux</a></p>
+<h3 id="_37">基本介绍</h3>
+<p>Tmux（Terminal Multiplexer）是一个在终端窗口中运行多个终端会话的工具。它允许用户在单个终端窗口中同时运行和管理多个虚拟终端，并提供了分离和重连会话的功能。</p>
+<h3 id="_38">主要特点和功能</h3>
+<h4 id="_39">多窗格布局</h4>
+<p>Tmux支持将终端窗口划分为多个窗格，每个窗格可以显示不同的终端会话或命令行界面。</p>
+<h4 id="_40">会话管理</h4>
+<p>Tmux允许用户创建和管理多个独立的会话。用户可以在会话之间自由切换，并在后台运行会话以便在需要时重新连接。</p>
+<h4 id="_41">分离和重连</h4>
+<p>Tmux的一个重要特性是可以在断开连接后保持会话的状态。这意味着即使关闭了终端窗口或网络连接中断，用户也可以重新连接到之前的会话并恢复工作环境。</p>
+<h4 id="_42">窗口和标签</h4>
+<p>Tmux允许用户在一个会话中创建多个窗口，并为每个窗口添加标签。这样可以方便地组织和切换不同的任务或项目。</p>
+<h4 id="_43">自定义配置</h4>
+<p>Tmux提供了丰富的配置选项，允许用户根据自己的喜好和需求来自定义键绑定、外观和行为。</p>
+<h3 id="_44">总结</h3>
+<p>Tmux在命令行界面下使用，并提供了一组丰富的命令和快捷键来管理终端会话和窗口布局。通过使用Tmux，用户可以更高效地利用终端窗口，同时运行和管理多个任务或会话，并实现工作环境的分离和重连。</p>
+<p>Tmux是一个非常有用和强大的工具，特别适合那些需要同时处理多个终端会话和任务的开发人员、系统管理员和远程连接用户。</p>
+<hr />
+<h2 id="vim">Vim</h2>
+<h3 id="_45">参考文档</h3>
+<h4 id="_46">自用配置</h4>
+<p><a href="Vim/Vim/">Vim 自用笔记</a></p>
+<p><a href="Vim/user_manual-2.4.0.pdf">Vim 手册</a></p>
+<p><a href="https://github.com/worst001/vim_0">自用 Vim 配置备份</a></p>
+<h4 id="_47">配套工具</h4>
+<p><a href="https://github.com/neovim/neovim">NeoVim</a></p>
+<p><a href="https://github.com/neoclide/coc.nvim">CocNvim</a></p>
+<p><a href="https://github.com/nvim-telescope/telescope.nvim">Packer与Telescope</a></p>
+<p><a href="https://github.com/junegunn/fzf">FZF</a></p>
+<p><a href="https://github.com/kamiyaa/joshuto">Joshuto</a></p>
+<h3 id="_48">基本介绍</h3>
+<p>Vim（Vi IMproved）是一款功能强大的文本编辑器，被广泛用于命令行环境和开发工作中。它是Vi编辑器的增强版本，提供了更多的功能和灵活性。</p>
+<h3 id="_49">主要特点和功能</h3>
+<h4 id="_50">模式</h4>
+<p>Vim具有多种模式，包括普通模式、插入模式、可视模式和命令行模式。在不同的模式下，用户可以执行各种编辑操作和命令。</p>
+<h4 id="_51">快速移动和编辑</h4>
+<p>Vim提供了丰富的快捷键和命令来高效地进行光标移动、文本选择、复制粘贴、删除、替换等编辑操作。</p>
+<h4 id="_52">可定制性</h4>
+<p>Vim支持丰富的配置选项和插件系统，允许用户根据自己的需求和喜好进行个性化设置和扩展功能。</p>
+<h4 id="_53">强大的搜索和替换</h4>
+<p>Vim提供了强大的搜索和替换功能，支持正则表达式和全局替换，可以快速查找和修改文本内容。</p>
+<h4 id="_54">分割窗口</h4>
+<p>Vim允许用户将编辑区域划分为多个水平或垂直的分割窗口，方便同时编辑多个文件或查看不同部分的代码。</p>
+<h4 id="_55">多语言支持</h4>
+<p>Vim支持多种编程语言，提供了语法高亮、自动缩进、代码折叠等功能，使得编码更加方便和可读。</p>
+<h4 id="_56">远程编辑</h4>
+<p>Vim可以通过SSH或其他远程连接方式进行远程编辑，方便在服务器上编辑文件。</p>
+<h3 id="_57">总结</h3>
+<p>Vim是一个高度可定制且极具效率的文本编辑器，它的学习曲线可能较陡峭，但一旦掌握，用户可以以非常快速和高效的方式进行文本编辑和开发工作。它被广泛用于Linux和Unix系统中，并支持Windows和Mac OS X等操作系统。</p>
+<hr />
+<h2 id="emacs">Emacs</h2>
+<h3 id="_58">参考文档</h3>
+<p><a href="https://www.spacemacs.org/">SpaceEmacs</a></p>
+<p><a href="https://oneforalone.github.io/cl-cookbook-cn/#/">Lisp</a></p>
+<p><a href="https://melpa.org/#/">MELPA 中心</a></p>
+<h3 id="_59">基本介绍</h3>
+<p>Emacs是一款功能强大的可扩展文本编辑器，广泛用于编程、文档撰写和其他文本处理任务。它具有高度可定制性和丰富的功能，被认为是一种操作系统级别的编辑环境。</p>
+<h3 id="_60">主要特点和功能</h3>
+<h4 id="_61">文本编辑</h4>
+<p>Emacs提供了全面的文本编辑功能，包括查找替换、剪切复制粘贴、撤销重做、缩进自动补全等。</p>
+<h4 id="_62">扩展性</h4>
+<p>Emacs允许用户通过Lisp编程语言来扩展和自定义其功能。用户可以编写脚本和插件来添加新的命令、编辑模式、函数和工具。</p>
+<h4 id="_63">多窗口和分割窗格</h4>
+<p>Emacs支持在一个编辑器实例中同时打开多个文件，并提供了灵活的窗口管理功能，包括水平和垂直的窗格分割、切换焦点等。</p>
+<h4 id="_64">代码编辑和调试</h4>
+<p>Emacs针对不同编程语言提供了丰富的代码编辑和开发环境，包括语法高亮、自动补全、代码折叠、编译和调试等功能。</p>
+<h4 id="_65">文件管理和版本控制</h4>
+<p>Emacs集成了文件和目录管理功能，可以浏览和操作文件系统。此外，它也支持常见的版本控制系统，如Git和SVN。</p>
+<h4 id="_66">文档查阅和阅读</h4>
+<p>Emacs可以打开各种文档格式，包括纯文本、PDF、HTML等。它还提供了浏览和搜索文档的功能。</p>
+<h4 id="_67">电子邮件和日历</h4>
+<p>Emacs内置了电子邮件客户端（Gnus）和日历管理工具，方便用户处理邮件和日程安排。</p>
+<h3 id="_68">总结</h3>
+<p>Emacs是一个非常灵活和可定制的编辑器，但也有一定的学习曲线。它提供了丰富的命令和快捷键，以及强大的扩展能力，适用于那些对编辑器进行高度定制并希望在一个环境中处理多种任务的用户。</p>
+<hr />
+<h2 id="_69">设计模式</h2>
+<h3 id="_70">参考文档</h3>
+<p><a href="%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">自用笔记</a></p>
+<p><a href="https://refactoringguru.cn/design-patterns/catalog">理论与详解</a></p>
+<p><a href="https://github.com/DovAmir/awesome-design-patterns">各语言模板总览</a></p>
+<h3 id="_71">基本介绍</h3>
+<p>设计模式（Design Patterns）是软件设计中常见问题的典型解决方案。它们是在多年软件开发实践中总结出来的，用以解决特定上下文中重复出现的设计问题。设计模式可以提高代码的可重用性、可读性和可维护性，并且可以改进系统的设计质量。</p>
+<h4 id="_72">设计模式通常被分成三类</h4>
+<ul>
+<li>创建型（Creational）</li>
+<li>结构型（Structural）</li>
+<li>行为型（Behavioral）</li>
+</ul>
+<h4 id="_73">创建型模式</h4>
+<p>创建型模式关注对象创建的不同方式。目的是创建对象时，增加程序的灵活性和复用性。</p>
+<ul>
+<li>单例（Singleton）：确保一个类只有一个实例，并提供一个全局访问点。</li>
+<li>简单工厂（Simple Factory）：一个工厂类根据传入的参数决定创建出哪一种产品类的实例，但不属于GOF提出的23种设计模式。</li>
+<li>工厂方法（Factory Method）：定义了一个创建对象的接口，让子类决定实例化哪一个类。</li>
+<li>抽象工厂（Abstract Factory）：允许创建一系列相关或互相依赖的对象，而不需要指定具体的类。</li>
+<li>建造者（Builder）：将一个复杂对象的构建与它的表示分离，同样的构建过程可以创建不同的表示。</li>
+<li>原型（Prototype）：通过复制现有的实例来创建新的实例，而不是新建实例。</li>
+</ul>
+<h4 id="_74">结构型模式</h4>
+<p>结构型模式涉及到如何组合类和对象以获得更大的结构。</p>
+<ul>
+<li>适配器（Adapter）：允许不兼容的接口可以一起工作。</li>
+<li>桥接（Bridge）：将抽象部分与实现部分分离，使它们可以独立变化。</li>
+<li>组合（Composite）：将对象组合成树形结构以表示部分-整体层次结构，使用户对单个对象和组合对象的使用具有一致性。</li>
+<li>装饰（Decorator）：动态地给一个对象添加一些额外的职责，就增加功能来说，它提供了比继承更有弹性的替代方案。</li>
+<li>外观（Facade）：提供一个统一的接口以访问子系统中的一群接口，从而使子系统更容易被使用。</li>
+<li>享元（Flyweight）：运用共享技术有效地支持大量细粒度的对象。</li>
+<li>代理（Proxy）：提供一个替代品或占位符来代表一个重量级对象，从而控制对它的访问。</li>
+</ul>
+<h4 id="_75">行为型模式</h4>
+<p>行为型模式专注于对象间的通信。</p>
+<ul>
+<li>责任链（Chain of Responsibility）：使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。</li>
+<li>命令（Command）：将一个请求封装为一个对象，从而使你可用不同的请求对客户进行参数化。</li>
+<li>解释器（Interpreter）：给定一个语言，定义它的文法的一种表示，并定义一个解释器。</li>
+<li>迭代器（Iterator）：提供一种方法顺序访问一个集合对象中各个元素，而不暴露其内部的表示。</li>
+<li>中介者（Mediator）：用一个中介对象来封装一系列的对象交云。</li>
+<li>备忘录（Memento）：捕捉一个对象的内部状态，以便在将来的某个时刻可以恢复它的状态。</li>
+<li>观察者（Observer）：当一个对象变化时，会自动通知它的依赖对象。</li>
+<li>状态（State）：允许一个对象在其内部状态改变时改变它的行为。</li>
+<li>策略（Strategy）：定义一系列的算法，把它们一个个封装起来，并且使它们可以互换。</li>
+<li>模板方法（Template Method）：定义一个操作中算法的骨架，而将一些步骤延迟到子类中。</li>
+<li>访问者（Visitor）：表示一个作用于某对象结构中的各元素的操作。它可以在不改变各元素的类的前提下定义作用于这些元素的新操作。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

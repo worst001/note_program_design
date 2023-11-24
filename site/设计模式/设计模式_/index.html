@@ -1,0 +1,2035 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>设计模式 - 程序与设计</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="程序与设计" class="md-header__button md-logo" aria-label="程序与设计" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            程序与设计
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              设计模式
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="程序与设计" class="md-nav__button md-logo" aria-label="程序与设计" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    程序与设计
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/README/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本语法与用法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/README/emoji/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    表情emoji
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://markdown.com.cn/basic-syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    官方教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.mkdocs.org/getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Latex
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Latex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.yuque.com/hanwenhao-bs03y/tncnv7/iy0aay0hgghfhqgn?singleDoc# 《Latex》" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex 自用脑图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://albertyzp.github.io/2019/10/15/LaTex%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/#%E4%B8%80-latex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex 中文手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Matlab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Matlab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ww2.mathworks.cn/help/matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab 官方手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://louiszhai.github.io/2017/09/30/tmux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tmux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Vim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vim/Vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim 自用笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vim/user_manual-2.4.0.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim 手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/worst001/vim_0" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自用 Vim 配置备份
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    配套工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            配套工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/neovim/neovim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NeoVim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/neoclide/coc.nvim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CocNvim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/nvim-telescope/telescope.nvim" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packer与Telescope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/junegunn/fzf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FZF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/kamiyaa/joshuto" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Joshuto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/puremourning/vimspector" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VimSpector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Emacs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Emacs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.spacemacs.org/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpaceEmacs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://oneforalone.github.io/cl-cookbook-cn/#/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lisp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://melpa.org/#/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MELPA 中心
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    设计模式
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            设计模式
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自用笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://refactoringguru.cn/design-patterns/catalog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论与详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/DovAmir/awesome-design-patterns" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    各语言模板总览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单例模式
+  </a>
+  
+    <nav class="md-nav" aria-label="单例模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    工厂模式
+  </a>
+  
+    <nav class="md-nav" aria-label="工厂模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    抽象工厂模式
+  </a>
+  
+    <nav class="md-nav" aria-label="抽象工厂模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    建造者模式
+  </a>
+  
+    <nav class="md-nav" aria-label="建造者模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    原型模式
+  </a>
+  
+    <nav class="md-nav" aria-label="原型模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    适配器模式
+  </a>
+  
+    <nav class="md-nav" aria-label="适配器模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    桥接模式
+  </a>
+  
+    <nav class="md-nav" aria-label="桥接模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    组合模式
+  </a>
+  
+    <nav class="md-nav" aria-label="组合模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    装饰器模式
+  </a>
+  
+    <nav class="md-nav" aria-label="装饰器模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    外观模式
+  </a>
+  
+    <nav class="md-nav" aria-label="外观模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    享元模式
+  </a>
+  
+    <nav class="md-nav" aria-label="享元模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    代理模式
+  </a>
+  
+    <nav class="md-nav" aria-label="代理模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    责任链模式
+  </a>
+  
+    <nav class="md-nav" aria-label="责任链模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    命令模式
+  </a>
+  
+    <nav class="md-nav" aria-label="命令模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    解释器模式
+  </a>
+  
+    <nav class="md-nav" aria-label="解释器模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    迭加器模式
+  </a>
+  
+    <nav class="md-nav" aria-label="迭加器模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    中介者模式
+  </a>
+  
+    <nav class="md-nav" aria-label="中介者模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    备忘录模式
+  </a>
+  
+    <nav class="md-nav" aria-label="备忘录模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    观察者模式
+  </a>
+  
+    <nav class="md-nav" aria-label="观察者模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    状态模式
+  </a>
+  
+    <nav class="md-nav" aria-label="状态模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    策略模式
+  </a>
+  
+    <nav class="md-nav" aria-label="策略模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    模板方法模式
+  </a>
+  
+    <nav class="md-nav" aria-label="模板方法模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    访问者模式
+  </a>
+  
+    <nav class="md-nav" aria-label="访问者模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">设计模式</h1>
+<!-- open /Users/hanwenhao/Cloud/思维导图/设计模式.mindnode -->
+
+<h2 id="_2">单例模式</h2>
+<h3 id="_3">作用</h3>
+<p><strong><em>类被实例化后只会留有单个实例在内存中</em></strong></p>
+<h3 id="_4">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Cpp/design-patterns-cpp/singleton/Singleton.cpp">C++</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Singleton/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/creational-design-patterns/src/main/scala/com/ivan/nikolov/creational/singleton/AppRegistry.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Singleton/Tests/SingletonTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/singleton.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/singleton/singleton.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/SingletonStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/singleton/singleton.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/singleton/singleton_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/singleton.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_5">工厂模式</h2>
+<h3 id="_6">作用</h3>
+<p><strong><em>可以实例化为不同的类型</em></strong></p>
+<h3 id="_7">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Factory/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/creational-design-patterns/src/main/scala/com/ivan/nikolov/creational/factories/simple/Animal.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/SimpleFactory/Tests/SimpleFactoryTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/factory.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/factory/simple.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/FactoryMethodStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/factory/factory.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/factory/factory_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/simpleFactory.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_8">抽象工厂模式</h2>
+<h3 id="_9">作用</h3>
+<p><strong><em>可以构建不同类型的工厂</em></strong></p>
+<h3 id="_10">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/AbstractFactory/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/creational-design-patterns/src/main/scala/com/ivan/nikolov/creational/factories/abstract_factory/DatabaseClient.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/AbstractFactory/Tests/AbstractFactoryTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/abstract_factory.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/abstract_factory/abstractfactory.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/AbstractFactoryStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/abstract-factory/abstract-factory.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/abstract-factory/abstract-factory_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/abstractFactory.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_11">建造者模式</h2>
+<h3 id="_12">作用</h3>
+<p><strong><em>设置类中的各个组件</em></strong></p>
+<h3 id="_13">模板</h3>
+<ul>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Builder/App.java">Java</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/creational-design-patterns/src/main/scala/com/ivan/nikolov/creational/builder/case_classes/Person.scala">Scala</a> <a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Builder/Tests/DirectorTest.php">PHP</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Python/builder.py">Python</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/builder/builder.go">Go</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/BuilderStructure.cs">Unity</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/builder/builder.js">JS-ES5</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/builder/builder_es6.js">JS-ES6</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/builder.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_14">原型模式</h2>
+<h3 id="_15">作用</h3>
+<p><strong><em>以某个原型为蓝本创建实例</em></strong></p>
+<h3 id="_16">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Prototype/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/creational-design-patterns/src/main/scala/com/ivan/nikolov/creational/prototype/Cell.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Prototype/Tests/PrototypeTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/prototype.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/prototype/prototype.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/PrototypeStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/prototype/prototype.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/prototype/prototype_es6_2.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/protoType.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_17">适配器模式</h2>
+<h3 id="_18">作用</h3>
+<p><strong><em>构建适配器将其他类翻译成当前类可识别的类</em></strong></p>
+<h3 id="_19">模板</h3>
+<ul>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Adapter/App.java">Java</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/structural-design-patterns/src/main/scala/com/ivan/nikolov/structural/adapter/AppLogger.scala">Scala</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Adapter/Tests/AdapterTest.php">PHP</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Python/adapter.py">Python</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/adapter/adapter.go">Go</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/AdapterStructure.cs">Unity</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/adapter/adapter.js">JS-ES5</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/adapter/adapter_es6.js">JS-ES6</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/adapter.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_20">桥接模式</h2>
+<h3 id="_21">作用</h3>
+<p><strong><em>拆分类中的抽象逻辑 具象化时桥接它们</em></strong></p>
+<h3 id="_22">模板</h3>
+<ul>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Bridge/App.java">Java</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/structural-design-patterns/src/main/scala/com/ivan/nikolov/structural/bridge/PasswordConverter.scala">Scala</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Bridge/Tests/BridgeTest.php">PHP</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Python/bridge.py">Python</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/bridge/bridge.go">Go</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/BridgeStructure.cs">Unity</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/bridge/bridge.js">JS-ES5</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/bridge/bridge_es6.js">JS-ES6</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/bridge.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_23">组合模式</h2>
+<h3 id="_24">作用</h3>
+<p><strong><em>整体与部分可以自由组合的结构 如树形结构</em></strong></p>
+<h3 id="_25">模板</h3>
+<ul>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Composite/App.java">Java</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/structural-design-patterns/src/main/scala/com/ivan/nikolov/structural/composite/Node.scala">Scala</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Composite/Tests/CompositeTest.php">PHP</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Python/composite.py">Python</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/composite/composite.go">Go</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/CompositeStructure.cs">Unity</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/composite/composite.js">JS-ES5</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/composite/composite_es6.js">JS-ES6</a></li>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/component.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_26">装饰器模式</h2>
+<h3 id="_27">作用</h3>
+<p><strong><em>基于原有类的基础行为上做进一步补充行为</em></strong></p>
+<h3 id="_28">模板</h3>
+<ul>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Decorator/App.java">Java</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/structural-design-patterns/src/main/scala/com/ivan/nikolov/structural/decorator/CapitalizedInputReaderTrait.scala">Scala</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Decorator/Tests/DecoratorTest.php">PHP</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/Python/decorator.py">Python</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/decorator/decorator.go">Go</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/DecoratorStructure.cs">Unity</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/decorator/decorator.js">JS-ES5</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/decorator/decorator_es6.js">JS-ES6</a></li>
+<li><a href="file:/Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/decorator.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_29">外观模式</h2>
+<h3 id="_30">作用</h3>
+<p><strong><em>集合复杂功能 向外部提供简单接口</em></strong></p>
+<h3 id="_31">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Facade/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/structural-design-patterns/src/main/scala/com/ivan/nikolov/structural/facade/DataDecoder.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Facade/Tests/FacadeTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/facade.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/facade/facade.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/FacadeStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/facade/facade.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/facade/facade_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/facade.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_32">享元模式</h2>
+<h3 id="_33">作用</h3>
+<p><strong><em>为高重复的对象建一个共享池</em></strong></p>
+<h3 id="_34">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Flyweight/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/structural-design-patterns/src/main/scala/com/ivan/nikolov/structural/flyweight/Circle.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Flyweight/Tests/FlyweightTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/flyweight.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/flyweight/flyweight.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/FlyweightStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/flyweight/flyweight.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/flyweight/flyweight_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/flyweight.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_35">代理模式</h2>
+<h3 id="_36">作用</h3>
+<p><strong><em>代理某个类 其行为应该受限</em></strong></p>
+<h3 id="_37">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Proxy/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/structural-design-patterns/src/main/scala/com/ivan/nikolov/structural/proxy/FileReader.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Proxy/Tests/ProxyTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/proxy.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/proxy/proxy.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/ProxyStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/proxy/proxy.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/proxy/proxy_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/proxy.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_38">责任链模式</h2>
+<h3 id="_39">作用</h3>
+<p><strong><em>将解耦请求和接受后的模块划分为若干责任块 以链表形式构建</em></strong></p>
+<h3 id="_40">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Chain/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/chain_of_responsibility/ATM.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Chain/Tests/ChainTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/chain.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/chain/chain.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/ChainOfResponsibilityStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/chain-of-resp/chain-of-resp.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/chain-of-resp/chain-of-resp_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/responeChain.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_41">命令模式</h2>
+<h3 id="_42">作用</h3>
+<p><strong><em>命令方向接收方下达一条命令 驱动接收方完成某项任务</em></strong></p>
+<h3 id="_43">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Command/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/command/Robot.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Command/Tests/CommandTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/command.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/command/command.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/CommandStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/command/command.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/command/command_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/command.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_44">解释器模式</h2>
+<h3 id="_45">作用</h3>
+<p><strong><em>解释一段文本的文法 上下文之间如何作用</em></strong></p>
+<blockquote>
+<p>一旦你的一段程序有了外部变量，这段程序就不完整，不能独立运行。
+你为了使他们运行，就要给所有的外部变量一个一个写一些值进去，这些值的集合叫上下文。</p>
+</blockquote>
+<h3 id="_46">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Interpreter/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/interpreter/Expression.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Interpreter/Tests/InterpreterTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/interpreter.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/interpreter/interpreter.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/InterpreterStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/interpreter/interpreter.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/interpreter/interpreter_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/interpreter.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_47">迭加器模式</h2>
+<h3 id="_48">作用</h3>
+<p><strong><em>提供外部可以顺序访问对象的接口</em></strong></p>
+<h3 id="_49">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Iterator/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/iterator/Student.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Iterator/Tests/IteratorTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/iterator.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/iterator/iterator.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/IteratorStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/iterator/iterator.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/iterator/iterator_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/iterator.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_50">中介者模式</h2>
+<h3 id="_51">作用</h3>
+<p><strong><em>使一个类可以通过中介和另一个类产生联系</em></strong></p>
+<h3 id="_52">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Mediator/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/mediator/Student.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Mediator/Tests/MediatorTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/mediator.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/mediator/mediator.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/MediatorStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/mediator/mediator.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/mediator/mediator_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/mediator.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_53">备忘录模式</h2>
+<h3 id="_54">作用</h3>
+<p><strong><em>保存实例的副本以便需要时恢复 如游戏记录 事务</em></strong></p>
+<h3 id="_55">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Memento/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/memento/Memento.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Memento/Tests/MementoTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/memento.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/memento/memento.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/MementoStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/memento/memento.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/memento/memento_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/memento.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_56">观察者模式</h2>
+<h3 id="_57">作用</h3>
+<p><strong><em>一个实例发生变化时通知所有依附于它的观察者</em></strong></p>
+<h3 id="_58">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Observer/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/observer/Observer.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Observer/Tests/ObserverTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/observer.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/observer/observer.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/ObserverStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/observer/observer.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/observer/observer_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/observer.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_59">状态模式</h2>
+<h3 id="_60">作用</h3>
+<p><strong><em>实例的行为依据实例的依赖状态</em></strong></p>
+<h3 id="_61">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/State/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/state/State.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/State/Tests/StateTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/state.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/state/state.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/StateStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/state/state.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/state/state_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/state.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_62">策略模式</h2>
+<h3 id="_63">作用</h3>
+<p><strong><em>根据不同的策略一类行为会产生不同的分析结果</em></strong></p>
+<h3 id="_64">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Strategy/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/strategy/Parser.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Strategy/Tests/StrategyTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/strategy.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/strategy/strategy.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/StrategyStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/strategy/strategy.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/strategy/strategy_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/strategy.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_65">模板方法模式</h2>
+<h3 id="_66">作用</h3>
+<p><strong><em>在父类中定义行为的大致框架 所有子类都有相似的行为</em></strong></p>
+<h3 id="_67">模板</h3>
+<ul>
+<li><a href="/Users/hanwenhao/Cloud/CodeTemplate/Design/Java/TemplateMethod/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/template/DataFinder.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/TemplateMethod/Tests/JourneyTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/template_method.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/template_method/templatemethod.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/TemplateMethodStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/template/template.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/template/template_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/template.lua">Lua</a></li>
+</ul>
+<hr />
+<h2 id="_68">访问者模式</h2>
+<h3 id="_69">作用</h3>
+<p><strong><em>一类实例对于不同的访问者 行为会有变化</em></strong></p>
+<h3 id="_70">模板</h3>
+<ul>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Java/Visitor/App.java">Java</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Scala/scala-design-patterns/behavioral-design-patterns/src/main/scala/com/ivan/nikolov/behavioral/visitor/Visitor.scala">Scala</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/PHP/Visitor/Tests/VisitorTest.php">PHP</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Python/visitor.py">Python</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Go/pattern/visitor/visitor.go">Go</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Unity/Pattern/Assets/VisitorStructure.cs">Unity</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/visitor/visitor.js">JS-ES5</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/JS/Pattern/visitor/visitor_es6.js">JS-ES6</a></li>
+<li><a href="file:///Users/hanwenhao/Cloud/CodeTemplate/Design/Lua/visitor.lua">Lua</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
