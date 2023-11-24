@@ -393,6 +393,6 @@ QQ:85087688
 [issues-shield]: https://img.shields.io/github/issues/worst001/mkdocs_program_design.svg?style=flat-square
 [issues-url]: https://img.shields.io/github/issues/worst001/mkdocs_program_design.svg
 [license-shield]: https://img.shields.io/github/license/worst001/mkdocs_program_design.svg?style=flat-square
-[license-url]: https://github.com/worst001/mkdocs_program_design/blob/master/LICENSE.txt
+[license-url]: https://github.com/worst001/mkdocs_program_design/blob/main/LICENSE.txt
 <!-- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555 -->
 <!-- [linkedin-url]: https://linkedin.com/in/shaojintian -->
