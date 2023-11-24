@@ -384,15 +384,13 @@ QQ:85087688
 
 <!-- links -->
 [your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
-[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
-[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
-[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
-[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
-[license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
-[license-url]: https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/shaojintian
+[contributors-shield]: https://img.shields.io/github/contributors/worst001/mkdocs_program_design.svg?style=flat-square
+[contributors-url]: https://github.com/worst001/mkdocs_program_design/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/worst001/mkdocs_program_design.svg?style=flat-square
+[forks-url]: https://github.com/worst001/mkdocs_program_design/network/members
+[stars-shield]: https://img.shields.io/github/stars/worst001/mkdocs_program_design.svg?style=flat-square
+[stars-url]: https://github.com/worst001/mkdocs_program_design/stargazers
+[issues-shield]: https://img.shields.io/github/issues/worst001/mkdocs_program_design.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/worst001/mkdocs_program_design.svg
+[license-shield]: https://img.shields.io/github/license/worst001/mkdocs_program_design.svg?style=flat-square
+[license-url]: https://github.com/worst001/mkdocs_program_design/blob/master/LICENSE.txt
