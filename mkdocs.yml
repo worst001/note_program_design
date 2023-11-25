@@ -1,13 +1,28 @@
 site_name: 程序与设计
-
 repo_name: 'worst001/mkdocs_program_design'  # 将 'username/repository' 更改为你的 GitHub 用户名和仓库名
 repo_url: 'https://github.com/worst001/mkdocs_program_design'  # 更改为你的 GitHub 仓库 URL
 
 theme:
   name: material
   palette:
-    primary: indigo
-    accent: indigo
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: purple
+    accent: purple
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: purple
+    accent: purple
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+
   icon:
     repo: fontawesome/brands/github
 
