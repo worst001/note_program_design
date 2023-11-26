@@ -373,8 +373,7 @@ Emacs是一个非常灵活和可定制的编辑器，但也有一定的学习曲
 
 制做不易，如果有帮到你就请作者喝杯咖啡吧!
 
-![支付宝加微信](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%8A%A0%E5%BE%AE%E4%BF%A1.jpg?Expires=1700904711&OSSAccessKeyId=TMP.3KgD1Dw1VWN9eHxZ7A3Md7zyGsKYtbjzUqsDAKLWvjyJAp3pCwuASSSn51dvp668yiYGpNxKo3ETJHN48DYrUSRSe2Va6o&Signature=xPqkGcEhDcvyV%2B4MshTyH0sX%2FMM%3D
-)
+![支付宝加微信](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%8A%A0%E5%BE%AE%E4%BF%A1.jpg?Expires=1700904711&OSSAccessKeyId=TMP.3KgD1Dw1VWN9eHxZ7A3Md7zyGsKYtbjzUqsDAKLWvjyJAp3pCwuASSSn51dvp668yiYGpNxKo3ETJHN48DYrUSRSe2Va6o&Signature=xPqkGcEhDcvyV%2B4MshTyH0sX%2FMM%3D)
 
 作者无聊时做的测试游戏，完全免费哦！
 
