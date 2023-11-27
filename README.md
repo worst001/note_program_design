@@ -17,6 +17,8 @@
 
 <!-- PROJECT LOGO -->
 
+--------------------
+
 ## 什么是程序编辑
 
 程序编辑指的是使用程序编辑器（文本编辑器或集成开发环境IDE）编写和修改源代码的过程。程序编辑器是软件开发人员用来创建、编辑、管理和查看源代码的工具。它们通常提供多种功能来帮助程序员高效编码，如语法高亮、代码自动完成、错误检测等。
@@ -132,6 +134,8 @@
 [各语言模板总览](https://github.com/DovAmir/awesome-design-patterns)
 
 
+-------------------
+
 ## 贡献者
 
 请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
@@ -148,10 +152,10 @@
 5. Open a Pull Request
 
 
-
 ## 版本控制
 
 该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
+
 
 ## 作者
 
@@ -159,11 +163,11 @@
 
 制做不易，如果有帮到你就请作者喝杯咖啡吧!
 
-![支付宝加微信](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%8A%A0%E5%BE%AE%E4%BF%A1.jpg?Expires=1700904711&OSSAccessKeyId=TMP.3KgD1Dw1VWN9eHxZ7A3Md7zyGsKYtbjzUqsDAKLWvjyJAp3pCwuASSSn51dvp668yiYGpNxKo3ETJHN48DYrUSRSe2Va6o&Signature=xPqkGcEhDcvyV%2B4MshTyH0sX%2FMM%3D)
+![支付宝加微信](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%8A%A0%E5%BE%AE%E4%BF%A1.jpg)
 
 作者无聊时做的测试游戏，完全免费哦！
 
-![公众号](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%B0%8F.jpg?Expires=1700905193&OSSAccessKeyId=TMP.3KgD1Dw1VWN9eHxZ7A3Md7zyGsKYtbjzUqsDAKLWvjyJAp3pCwuASSSn51dvp668yiYGpNxKo3ETJHN48DYrUSRSe2Va6o&Signature=S7rT8B6vp9vI4sqw3bcPgoTXC4I%3D)
+![公众号](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%B0%8F.jpg)
 
 ## 参考资料
 
