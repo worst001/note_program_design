@@ -306,7 +306,7 @@ Emacs是一个非常灵活和可定制的编辑器，但也有一定的学习曲
 
 ### 参考文档
 
-[自用笔记](设计模式/设计模式.md)
+[为了人类的设计](设计模式/design-patterns-for-humans-cn/README.md)
 
 [理论与详解](https://refactoringguru.cn/design-patterns/catalog)
 

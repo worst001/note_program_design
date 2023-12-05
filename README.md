@@ -54,84 +54,56 @@
 
 ## Markdown
 
-### 参考文档
-
-[基本语法与用法](Markdown/README/README.md)
-
-[表情emoji](Markdown/README/emoji.md)
-
-[官方教程](https://markdown.com.cn/basic-syntax/)
-
-[mkdocs](https://www.mkdocs.org/getting-started/)
++ [基本语法与用法](Markdown/README/README.md)
++ [表情emoji](Markdown/README/emoji.md)
++ [官方教程](https://markdown.com.cn/basic-syntax/)
++ [mkdocs](https://www.mkdocs.org/getting-started/)
 
 ## Latex
 
-### 参考文档
-
-[Latex 自用脑图](https://www.yuque.com/hanwenhao-bs03y/tncnv7/iy0aay0hgghfhqgn?singleDoc# 《Latex》)
-
-[Latex 中文手册](https://albertyzp.github.io/2019/10/15/LaTex%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/#%E4%B8%80-latex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
++ [Latex 自用脑图](https://www.yuque.com/hanwenhao-bs03y/tncnv7/iy0aay0hgghfhqgn?singleDoc# 《Latex》)
++ [Latex 中文手册](https://albertyzp.github.io/2019/10/15/LaTex%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/#%E4%B8%80-latex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
 
 
 ## Matlab
 
-### 参考文档
-
-[Matlab 官方手册](https://ww2.mathworks.cn/help/matlab/)
++ [Matlab 官方手册](https://ww2.mathworks.cn/help/matlab/)
 
 
 ## Tmux
 
-### 参考文档
-
-[Tmux](https://louiszhai.github.io/2017/09/30/tmux/)
++ [Tmux](https://louiszhai.github.io/2017/09/30/tmux/)
 
 
 ## Vim
 
-### 参考文档
-
 #### 自用配置
 
-[Vim 自用笔记](Vim/Vim.md)
-
-[Vim 手册](Vim/user_manual-2.4.0.pdf)
-
-[自用 Vim 配置备份](https://github.com/worst001/vim_0)
++ [Vim 自用笔记](Vim/Vim.md)
++ [Vim 手册](Vim/user_manual-2.4.0.pdf)
++ [自用 Vim 配置备份](https://github.com/worst001/vim_0)
 
 #### 配套工具
 
-[NeoVim](https://github.com/neovim/neovim)
-
-[CocNvim](https://github.com/neoclide/coc.nvim)
-
-[Packer与Telescope](https://github.com/nvim-telescope/telescope.nvim)
-
-[FZF](https://github.com/junegunn/fzf)
-
-[Joshuto](https://github.com/kamiyaa/joshuto)
++ [NeoVim](https://github.com/neovim/neovim)
++ [CocNvim](https://github.com/neoclide/coc.nvim)
++ [Packer与Telescope](https://github.com/nvim-telescope/telescope.nvim)
++ [FZF](https://github.com/junegunn/fzf)
++ [Joshuto](https://github.com/kamiyaa/joshuto)
 
 
 ## Emacs
 
-### 参考文档
-
-[SpaceEmacs](https://www.spacemacs.org/)
-
-[Lisp](https://oneforalone.github.io/cl-cookbook-cn/#/)
-
-[MELPA 中心](https://melpa.org/#/)
++ [SpaceEmacs](https://www.spacemacs.org/)
++ [Lisp](https://oneforalone.github.io/cl-cookbook-cn/#/)
++ [MELPA 中心](https://melpa.org/#/)
 
 
 ## 设计模式
 
-### 参考文档
-
-[自用笔记](设计模式/设计模式.md)
-
-[理论与详解](https://refactoringguru.cn/design-patterns/catalog)
-
-[各语言模板总览](https://github.com/DovAmir/awesome-design-patterns)
++ [为了人类的设计](设计模式/design-patterns-for-humans-cn/README.md)
++ [理论与详解](https://refactoringguru.cn/design-patterns/catalog)
++ [各语言模板总览](https://github.com/DovAmir/awesome-design-patterns)
 
 
 -------------------
@@ -178,6 +150,8 @@
 [https://github.com/theniceboy/nvim](https://github.com/theniceboy/nvim)
 
 [https://github.com/doomemacs/doomemacs](https://github.com/doomemacs/doomemacs)
+
+[https://github.com/kamranahmedse/design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)
 
 [https://github.com/JakubVojvoda/design-patterns-cpp](https://github.com/JakubVojvoda/design-patterns-cpp)
 
