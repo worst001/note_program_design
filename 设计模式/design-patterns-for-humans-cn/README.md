@@ -8,43 +8,41 @@
 
 * * *
 
-[![Build Status](https://travis-ci.org/guanguans/design-patterns-for-humans-cn.svg?branch=master)](https://travis-ci.org/guanguans/design-patterns-for-humans-cn)
-
 <!-- TOC updateOnSave:false -->
 
-- [⚠️注意](#⚠️注意)
-- [创建型设计模式](#创建型设计模式)
-    - [🏠简单工厂模式（Simple Factory）](#🏠简单工厂模式simple-factory)
-    - [🏭工厂方法模式（Factory Method）](#🏭工厂方法模式factory-method)
-    - [🔨抽象工厂模式（Abstract Factory）](#🔨抽象工厂模式abstract-factory)
-    - [👷构建器模式](#👷构建器模式)
-    - [🐑原型模式（Prototype）](#🐑原型模式prototype)
-    - [💍单例模式（Singleton）](#💍单例模式singleton)
-- [结构型设计模式](#结构型设计模式)
-    - [🔌适配器模式（Adapter）](#🔌适配器模式adapter)
-    - [🚡桥梁模式（Bridge）](#🚡桥梁模式bridge)
-    - [🌿组合模式（Composite）](#🌿组合模式composite)
-    - [☕装饰模式（Decorator）](#☕装饰模式decorator)
-    - [📦门面模式（Facade）](#📦门面模式facade)
-    - [🍃享元模式（Flyweight）](#🍃享元模式flyweight)
-    - [🎱代理模式（Proxy）](#🎱代理模式proxy)
-- [行为型设计模式](#行为型设计模式)
-    - [🔗责任链模式（Chain Of Responsibilities）](#🔗责任链模式chain-of-responsibilities)
-    - [👮命令行模式（Command）](#👮命令行模式command)
-    - [➿迭代器模式（Iterator）](#➿迭代器模式iterator)
-    - [👽中介者模式（Mediator）](#👽中介者模式mediator)
-    - [💾备忘录模式（Memento）](#💾备忘录模式memento)
-    - [😎观察者模式（Observer）](#😎观察者模式observer)
-    - [🏃访问者模式（Visitor）](#🏃访问者模式visitor)
-    - [💡策略模式（Strategy）](#💡策略模式strategy)
-    - [💢状态模式（State）](#💢状态模式state)
-    - [📒模板方法模式（Template Method）](#📒模板方法模式template-method)
-- [🚦总结一下](#🚦总结一下)
-- [License](#license)
+<!-- - [⚠️注意](#⚠️注意) -->
+<!-- - [创建型设计模式](#创建型设计模式) -->
+<!--     - [🏠简单工厂模式（Simple Factory）](#🏠简单工厂模式simple-factory) -->
+<!--     - [🏭工厂方法模式（Factory Method）](#🏭工厂方法模式factory-method) -->
+<!--     - [🔨抽象工厂模式（Abstract Factory）](#🔨抽象工厂模式abstract-factory) -->
+<!--     - [👷构建器模式](#👷构建器模式) -->
+<!--     - [🐑原型模式（Prototype）](#🐑原型模式prototype) -->
+<!--     - [💍单例模式（Singleton）](#💍单例模式singleton) -->
+<!-- - [结构型设计模式](#结构型设计模式) -->
+<!--     - [🔌适配器模式（Adapter）](#🔌适配器模式adapter) -->
+<!--     - [🚡桥梁模式（Bridge）](#🚡桥梁模式bridge) -->
+<!--     - [🌿组合模式（Composite）](#🌿组合模式composite) -->
+<!--     - [☕装饰模式（Decorator）](#☕装饰模式decorator) -->
+<!--     - [📦门面模式（Facade）](#📦门面模式facade) -->
+<!--     - [🍃享元模式（Flyweight）](#🍃享元模式flyweight) -->
+<!--     - [🎱代理模式（Proxy）](#🎱代理模式proxy) -->
+<!-- - [行为型设计模式](#行为型设计模式) -->
+<!--     - [🔗责任链模式（Chain Of Responsibilities）](#🔗责任链模式chain-of-responsibilities) -->
+<!--     - [👮命令行模式（Command）](#👮命令行模式command) -->
+<!--     - [➿迭代器模式（Iterator）](#➿迭代器模式iterator) -->
+<!--     - [👽中介者模式（Mediator）](#👽中介者模式mediator) -->
+<!--     - [💾备忘录模式（Memento）](#💾备忘录模式memento) -->
+<!--     - [😎观察者模式（Observer）](#😎观察者模式observer) -->
+<!--     - [🏃访问者模式（Visitor）](#🏃访问者模式visitor) -->
+<!--     - [💡策略模式（Strategy）](#💡策略模式strategy) -->
+<!--     - [💢状态模式（State）](#💢状态模式state) -->
+<!--     - [📒模板方法模式（Template Method）](#📒模板方法模式template-method) -->
+<!-- - [🚦总结一下](#🚦总结一下) -->
+<!-- - [License](#license) -->
 
 <!-- /TOC -->
 
-# 介绍
+## 介绍
 
 设计模式是反复出现问题的解决方案; **如何解决某些问题的指导方针**。它们不是可以插入应用程序并等待神奇发生的类，包或库。相反，这些是如何在某些情况下解决某些问题的指导原则。
 
@@ -54,7 +52,7 @@
 
 > 在软件工程中，软件设计模式是软件设计中给定上下文中常见问题的通用可重用解决方案。它不是可以直接转换为源代码或机器代码的完成设计。它是如何解决可在许多不同情况下使用的问题的描述或模板。
 
-## ⚠️注意
+### ⚠️注意
 
 * 设计模式不是解决所有问题的灵丹妙药。
 * 不要试图强迫他们; 如果这样做的话，应该发生坏事。
@@ -63,13 +61,13 @@
 
 > 另请注意，下面的代码示例是 PHP-7，但是这不应该阻止你因为概念是相同的。
 
-## 设计模式的类型
+### 设计模式的类型
 
 * [创建型](#creational-design-patterns)
 * [结构型](#structural-design-patterns)
 * [行为型](#behavioral-design-patterns)
 
-# 创建型设计模式
+## [](#creational-design-patterns)创建型设计模式
 
 简单来说
 
@@ -86,7 +84,7 @@
 * [原型模式（Prototype）](#-prototype)
 * [单例模式（Singleton）](#-singleton)
 
-## 🏠简单工厂模式（Simple Factory）
+### 🏠简单工厂模式（Simple Factory）
 
 现实世界的例子
 
@@ -105,6 +103,7 @@
 首先，我们有一个门界面和实现
 
 ```php
+<?php
 interface Door
 {
     public function getWidth(): float;
@@ -137,6 +136,7 @@ class WoodenDoor implements Door
 然后，我们有我们的门工厂，门，并返回它
 
 ```php
+<?php
 class DoorFactory
 {
     public static function makeDoor($width, $height): Door
@@ -149,6 +149,7 @@ class DoorFactory
 然后它可以用作
 
 ```php
+<?php
 // Make me a door of 100x200
 $door = DoorFactory::makeDoor(100, 200);
 
@@ -169,7 +170,7 @@ $door2 = DoorFactory::makeDoor(50, 100);
 + [PHP](https://github.com/DesignPatternsPHP/DesignPatternsPHP/tree/main/Creational/SimpleFactory)
 + [Go](https://github.com/senghoo/golang-design-pattern/tree/master/00_simple_factory)
 
-## 🏭工厂方法模式（Factory Method）
+### 🏭工厂方法模式（Factory Method）
 
 现实世界的例子
 
@@ -188,6 +189,7 @@ $door2 = DoorFactory::makeDoor(50, 100);
 以上面的招聘经理为例。首先，我们有一个访谈者界面和一些实现
 
 ```php
+<?php
 interface Interviewer
 {
     public function askQuestions();
@@ -213,6 +215,7 @@ class CommunityExecutive implements Interviewer
 现在让我们创造我们的 `HiringManager`
 
 ```php
+<?php
 abstract class HiringManager
 {
 
@@ -231,6 +234,7 @@ abstract class HiringManager
 现在任何孩子都可以延长并提供所需的面试官
 
 ```php
+<?php
 class DevelopmentManager extends HiringManager
 {
     protected function makeInterviewer(): Interviewer
@@ -251,6 +255,7 @@ class MarketingManager extends HiringManager
 然后它可以用作
 
 ```php
+<?php
 $devManager = new DevelopmentManager();
 $devManager->takeInterview(); // Output: Asking about design patterns
 
@@ -274,7 +279,7 @@ $marketingManager->takeInterview(); // Output: Asking about community building.
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/creational/factory/factory_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/factoryMethod.lua)
 
-## 🔨抽象工厂模式（Abstract Factory）
+### 🔨抽象工厂模式（Abstract Factory）
 
 现实世界的例子
 
@@ -293,6 +298,7 @@ $marketingManager->takeInterview(); // Output: Asking about community building.
 翻译上面的门例子。首先，我们有我们的`Door`界面和一些实现
 
 ```php
+<?php
 interface Door
 {
     public function getDescription();
@@ -318,6 +324,7 @@ class IronDoor implements Door
 然后我们为每种门类型都配备了一些装配专家
 
 ```php
+<?php
 interface DoorFittingExpert
 {
     public function getDescription();
@@ -343,6 +350,7 @@ class Carpenter implements DoorFittingExpert
 现在我们有抽象工厂，让我们制作相关对象的家庭，即木门工厂将创建一个木门和木门配件专家和铁门工厂将创建一个铁门和铁门配件专家
 
 ```php
+<?php
 interface DoorFactory
 {
     public function makeDoor(): Door;
@@ -381,6 +389,7 @@ class IronDoorFactory implements DoorFactory
 然后它可以用作
 
 ```php
+<?php
 $woodenFactory = new WoodenDoorFactory();
 
 $door = $woodenFactory->makeDoor();
@@ -418,7 +427,7 @@ $expert->getDescription(); // Output: I can only fit iron doors
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/abstractFactory.lua)
 
 
-## 👷构建器模式
+### 👷构建器模式
 
 现实世界的例子
 
@@ -435,6 +444,7 @@ $expert->getDescription(); // Output: I can only fit iron doors
 话虽如此，让我补充说一下伸缩构造函数反模式是什么。在某一点或另一点，我们都看到了如下构造函数：
 
 ```php
+<?php
 public function __construct($size, $cheese = true, $pepperoni = true, $tomato = false, $lettuce = true)
 {
 }
@@ -447,6 +457,7 @@ public function __construct($size, $cheese = true, $pepperoni = true, $tomato = 
 理智的替代方案是使用构建器模式。首先，我们要制作汉堡
 
 ```php
+<?php
 class Burger
 {
     protected $size;
@@ -470,6 +481,7 @@ class Burger
 然后我们有了建设者
 
 ```php
+<?php
 class BurgerBuilder
 {
     public $size;
@@ -518,6 +530,7 @@ class BurgerBuilder
 然后它可以用作：
 
 ```php
+<?php
 $burger = (new BurgerBuilder(14))
                     ->addPepperoni()
                     ->addLettuce()
@@ -542,7 +555,7 @@ $burger = (new BurgerBuilder(14))
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/builder.lua)
 
 
-## 🐑原型模式（Prototype）
+### 🐑原型模式（Prototype）
 
 现实世界的例子
 
@@ -563,6 +576,7 @@ $burger = (new BurgerBuilder(14))
 在 PHP 中，它可以很容易地使用 `clone`
 
 ```php
+<?php
 class Sheep
 {
     protected $name;
@@ -599,6 +613,7 @@ class Sheep
 然后它可以像下面一样克隆
 
 ```php
+<?php
 $original = new Sheep('Jolly');
 echo $original->getName(); // Jolly
 echo $original->getCategory(); // Mountain Sheep
@@ -628,7 +643,7 @@ echo $cloned->getCategory(); // Mountain sheep
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/creational/prototype/prototype_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/protoType.lua)
 
-## 💍单例模式（Singleton）
+### 💍单例模式（Singleton）
 
 现实世界的例子
 
@@ -649,6 +664,7 @@ echo $cloned->getCategory(); // Mountain sheep
 要创建单例，请将构造函数设为私有，禁用克隆，禁用扩展并创建静态变量以容纳实例
 
 ```php
+<?php
 final class President
 {
     private static $instance;
@@ -682,6 +698,7 @@ final class President
 然后才能使用
 
 ```php
+<?php
 $president1 = President::getInstance();
 $president2 = President::getInstance();
 
@@ -701,7 +718,7 @@ var_dump($president1 === $president2); // true
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/singleton.lua)
 
 
-# [](#structural-design-patterns)结构型设计模式
+## [](#structural-design-patterns)结构型设计模式
 
 简单来说
 
@@ -719,7 +736,7 @@ var_dump($president1 === $president2); // true
 * [享元模式（Flyweight）](#-flyweight)
 * [代理模式（Proxy）](#-proxy)
 
-## 🔌适配器模式（Adapter）
+### 🔌适配器模式（Adapter）
 
 现实世界的例子
 
@@ -740,6 +757,7 @@ var_dump($president1 === $president2); // true
 首先，我们有一个`Lion`所有类型的狮子必须实现的接口
 
 ```php
+<?php
 interface Lion
 {
     public function roar();
@@ -763,6 +781,7 @@ class AsianLion implements Lion
 猎人期望任何`Lion`接口的实现都可以进行搜索。
 
 ```php
+<?php
 class Hunter
 {
     public function hunt(Lion $lion)
@@ -775,6 +794,7 @@ class Hunter
 现在让我们说我们必须`WildDog`在我们的游戏中添加一个，以便猎人也可以追捕它。但我们不能直接这样做，因为狗有不同的界面。为了使它与我们的猎人兼容，我们将不得不创建一个兼容的适配器
 
 ```php
+<?php
 // This needs to be added to the game
 class WildDog
 {
@@ -803,6 +823,7 @@ class WildDogAdapter implements Lion
 而现在`WildDog`可以在我们的游戏中使用`WildDogAdapter`。
 
 ```php
+<?php
 $wildDog = new WildDog();
 $wildDogAdapter = new WildDogAdapter($wildDog);
 
@@ -822,7 +843,7 @@ $hunter->hunt($wildDogAdapter);
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/structural/adapter/adapter_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/adapter.lua)
 
-## 🚡桥梁模式（Bridge）
+### 🚡桥梁模式（Bridge）
 
 现实世界的例子
 
@@ -843,6 +864,7 @@ $hunter->hunt($wildDogAdapter);
 从上面翻译我们的 WebPage 示例。这里我们有`WebPage`层次结构
 
 ```php
+<?php
 interface WebPage
 {
     public function __construct(Theme $theme);
@@ -883,6 +905,7 @@ class Careers implements WebPage
 和单独的主题层次结构
 
 ```php
+<?php
 
 interface Theme
 {
@@ -915,6 +938,7 @@ class AquaTheme implements Theme
 而且这两个层次结构
 
 ```php
+<?php
 $darkTheme = new DarkTheme();
 
 $about = new About($darkTheme);
@@ -936,7 +960,7 @@ echo $careers->getContent(); // "Careers page in Dark Black";
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/structural/bridge/bridge_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/bridge.lua)
 
-## 🌿组合模式（Composite）
+### 🌿组合模式（Composite）
 
 现实世界的例子
 
@@ -955,6 +979,7 @@ echo $careers->getContent(); // "Careers page in Dark Black";
 以上面的员工为例。这里我们有不同的员工类型
 
 ```php
+<?php
 interface Employee
 {
     public function __construct(string $name, float $salary);
@@ -1034,6 +1059,7 @@ class Designer implements Employee
 然后我们有一个由几种不同类型的员工组成的组织
 
 ```php
+<?php
 class Organization
 {
     protected $employees;
@@ -1059,6 +1085,7 @@ class Organization
 然后它可以用作
 
 ```php
+<?php
 // Prepare the employees
 $john = new Developer('John Doe', 12000);
 $jane = new Designer('Jane Doe', 15000);
@@ -1083,7 +1110,7 @@ echo "Net salaries: " . $organization->getNetSalaries(); // Net Salaries: 27000
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/structural/composite/composite_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/component.lua)
 
-## ☕装饰模式（Decorator）
+### ☕装饰模式（Decorator）
 
 现实世界的例子
 
@@ -1102,6 +1129,7 @@ echo "Net salaries: " . $organization->getNetSalaries(); // Net Salaries: 27000
 让我们以咖啡为例。首先，我们有一个简单的咖啡实现咖啡界面
 
 ```php
+<?php
 interface Coffee
 {
     public function getCost();
@@ -1125,6 +1153,7 @@ class SimpleCoffee implements Coffee
 我们希望使代码可扩展，以允许选项在需要时修改它。让我们做一些附加组件（装饰器）
 
 ```php
+<?php
 class MilkCoffee implements Coffee
 {
     protected $coffee;
@@ -1189,6 +1218,7 @@ class VanillaCoffee implements Coffee
 让我们现在喝杯咖啡
 
 ```php
+<?php
 $someCoffee = new SimpleCoffee();
 echo $someCoffee->getCost(); // 10
 echo $someCoffee->getDescription(); // Simple Coffee
@@ -1218,7 +1248,7 @@ echo $someCoffee->getDescription(); // Simple Coffee, milk, whip, vanilla
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/structural/decorator/decorator_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/decorator.lua)
 
-## 📦门面模式（Facade）
+### 📦门面模式（Facade）
 
 现实世界的例子
 
@@ -1237,6 +1267,7 @@ echo $someCoffee->getDescription(); // Simple Coffee, milk, whip, vanilla
 从上面看我们的计算机示例。这里我们有电脑课
 
 ```php
+<?php
 class Computer
 {
     public function getElectricShock()
@@ -1279,6 +1310,7 @@ class Computer
 在这里，我们有门面
 
 ```php
+<?php
 class ComputerFacade
 {
     protected $computer;
@@ -1308,6 +1340,7 @@ class ComputerFacade
 现在使用立面
 
 ```php
+<?php
 $computer = new ComputerFacade(new Computer());
 $computer->turnOn(); // Ouch! Beep beep! Loading.. Ready to be used!
 $computer->turnOff(); // Bup bup buzzz! Haah! Zzzzz
@@ -1326,7 +1359,7 @@ $computer->turnOff(); // Bup bup buzzz! Haah! Zzzzz
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/facade.lua)
 
 
-## 🍃享元模式（Flyweight）
+### 🍃享元模式（Flyweight）
 
 现实世界的例子
 
@@ -1345,6 +1378,7 @@ $computer->turnOff(); // Bup bup buzzz! Haah! Zzzzz
 从上面翻译我们的茶例子。首先，我们有茶类和茶具
 
 ```php
+<?php
 // Anything that will be cached is flyweight.
 // Types of tea here will be flyweights.
 class KarakTea
@@ -1370,6 +1404,7 @@ class TeaMaker
 然后我们有`TeaShop`接受订单并为他们服务
 
 ```php
+<?php
 class TeaShop
 {
     protected $orders;
@@ -1397,6 +1432,7 @@ class TeaShop
 它可以如下使用
 
 ```php
+<?php
 $teaMaker = new TeaMaker();
 $shop = new TeaShop($teaMaker);
 
@@ -1423,7 +1459,7 @@ $shop->serve();
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/flyweight.lua)
 
 
-## 🎱代理模式（Proxy）
+### 🎱代理模式（Proxy）
 现实世界的例子
 
 > 你有没有用过门禁卡进门？打开该门有多种选择，即可以使用门禁卡或按下绕过安检的按钮打开。门的主要功能是打开，但在它上面添加了一个代理来添加一些功能。让我用下面的代码示例更好地解释它。
@@ -1441,6 +1477,7 @@ $shop->serve();
 从上面看我们的安全门示例。首先我们有门界面和门的实现
 
 ```php
+<?php
 interface Door
 {
     public function open();
@@ -1464,6 +1501,7 @@ class LabDoor implements Door
 然后我们有一个代理来保护我们想要的任何门
 
 ```php
+<?php
 class SecuredDoor
 {
     protected $door;
@@ -1497,6 +1535,7 @@ class SecuredDoor
 以下是它的使用方法
 
 ```php
+<?php
 $door = new SecuredDoor(new LabDoor());
 $door->open('invalid'); // Big no! It ain't possible.
 
@@ -1518,7 +1557,7 @@ $door->close(); // Closing lab door
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/structural/flyweight/flyweight_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/flyweight.lua)
 
-# [](#behavioral-design-patterns)行为型设计模式
+## [](#behavioral-design-patterns)行为型设计模式
 
 简单来说
 
@@ -1539,7 +1578,7 @@ $door->close(); // Closing lab door
 * [状态模式（State）](#-state)
 * [模板方法模式（Template Method）](#-template-method)
 
-## 🔗责任链模式（Chain Of Responsibilities）
+### 🔗责任链模式（Chain Of Responsibilities）
 
 现实世界的例子
 
@@ -1558,6 +1597,7 @@ $door->close(); // Closing lab door
 翻译上面的帐户示例。首先，我们有一个基本帐户，其中包含将帐户链接在一起的逻辑和一些帐户
 
 ```php
+<?php
 abstract class Account
 {
     protected $successor;
@@ -1620,6 +1660,7 @@ class Bitcoin extends Account
 现在让我们使用上面定义的链接准备链（即 Bank，Paypal，Bitcoin）
 
 ```php
+<?php
 // Let's prepare a chain like below
 //      $bank->$paypal->$bitcoin
 //
@@ -1657,7 +1698,7 @@ $bank->pay(259);
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/responeChain.lua)
 
 
-## 👮命令行模式（Command）
+### 👮命令行模式（Command）
 
 现实世界的例子
 
@@ -1676,6 +1717,7 @@ $bank->pay(259);
 首先，我们有接收器，它可以执行每个可以执行的操作
 
 ```php
+<?php
 // Receiver
 class Bulb
 {
@@ -1694,6 +1736,7 @@ class Bulb
 然后我们有一个接口，每个命令将实现，然后我们有一组命令
 
 ```php
+<?php
 interface Command
 {
     public function execute();
@@ -1756,6 +1799,7 @@ class TurnOff implements Command
 然后我们`Invoker`与客户端进行交互以处理任何命令
 
 ```php
+<?php
 // Invoker
 class RemoteControl
 {
@@ -1769,6 +1813,7 @@ class RemoteControl
 最后，让我们看看我们如何在客户端使用它
 
 ```php
+<?php
 $bulb = new Bulb();
 
 $turnOn = new TurnOn($bulb);
@@ -1793,7 +1838,7 @@ $remote->submit($turnOff); // Darkness!
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/behavioral/command/command_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/command.lua)
 
-## ➿迭代器模式（Iterator）
+### ➿迭代器模式（Iterator）
 
 现实世界的例子
 
@@ -1812,6 +1857,7 @@ $remote->submit($turnOff); // Darkness!
 在 PHP 中，使用 SPL（标准 PHP 库）很容易实现。从上面翻译我们的广播电台示例。首先，我们有`RadioStation`
 
 ```php
+<?php
 class RadioStation
 {
     protected $frequency;
@@ -1831,6 +1877,7 @@ class RadioStation
 然后我们有了迭代器
 
 ```php
+<?php
 use Countable;
 use Iterator;
 
@@ -1890,6 +1937,7 @@ class StationList implements Countable, Iterator
 然后它可以用作
 
 ```php
+<?php
 $stationList = new StationList();
 
 $stationList->addStation(new RadioStation(89));
@@ -1916,7 +1964,7 @@ $stationList->removeStation(new RadioStation(89)); // Will remove station 89
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/behavioral/iterator/iterator_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/iterator.lua)
 
-## 👽中介者模式（Mediator）
+### 👽中介者模式（Mediator）
 
 现实世界的例子
 
@@ -1938,6 +1986,7 @@ $stationList->removeStation(new RadioStation(89)); // Will remove station 89
 
 
 ```php
+<?php
 interface ChatRoomMediator 
 {
     public function showMessage(User $user, string $message);
@@ -1959,6 +2008,7 @@ class ChatRoom implements ChatRoomMediator
 然后我们有我们的用户，即同事
 
 ```php
+<?php
 class User {
     protected $name;
     protected $chatMediator;
@@ -1981,6 +2031,7 @@ class User {
 和用法
 
 ```php
+<?php
 $mediator = new ChatRoom();
 
 $john = new User('John Doe', $mediator);
@@ -2006,7 +2057,7 @@ $jane->send('Hey!');
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/behavioral/mediator/mediator_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/mediator.lua)
 
-## 💾备忘录模式（Memento）
+### 💾备忘录模式（Memento）
 
 现实世界的例子
 
@@ -2029,6 +2080,7 @@ $jane->send('Hey!');
 首先，我们有 memento 对象，可以保存编辑器状态
 
 ```php
+<?php
 class EditorMemento
 {
     protected $content;
@@ -2048,6 +2100,7 @@ class EditorMemento
 然后我们有我们的编辑器即即将使用 memento 对象的创作者
 
 ```php
+<?php
 class Editor
 {
     protected $content = '';
@@ -2077,6 +2130,7 @@ class Editor
 然后它可以用作
 
 ```php
+<?php
 $editor = new Editor();
 
 // Type some stuff
@@ -2110,7 +2164,7 @@ $editor->getContent(); // This is the first sentence. This is second.
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/behavioral/memento/memento_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/memento.lua)
 
-## 😎观察者模式（Observer）
+### 😎观察者模式（Observer）
 
 现实世界的例子
 
@@ -2129,6 +2183,7 @@ $editor->getContent(); // This is the first sentence. This is second.
 从上面翻译我们的例子。首先，我们有求职者需要通知职位发布
 
 ```php
+<?php
 class JobPost
 {
     protected $title;
@@ -2164,6 +2219,7 @@ class JobSeeker implements Observer
 然后我们会找到求职者会订阅的招聘信息
 
 ```php
+<?php
 class EmploymentAgency implements Observable
 {
     protected $observers = [];
@@ -2190,6 +2246,7 @@ class EmploymentAgency implements Observable
 然后它可以用作
 
 ```php
+<?php
 // Create subscribers
 $johnDoe = new JobSeeker('John Doe');
 $janeDoe = new JobSeeker('Jane Doe');
@@ -2220,7 +2277,7 @@ $jobPostings->addJob(new JobPost('Software Engineer'));
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/observer.lua)
 
 
-## 🏃访问者模式（Visitor）
+### 🏃访问者模式（Visitor）
 
 现实世界的例子
 
@@ -2239,6 +2296,7 @@ $jobPostings->addJob(new JobPost('Software Engineer'));
 让我们举一个动物园模拟的例子，我们有几种不同的动物，我们必须让它们成为声音。让我们用访客模式翻译这个
 
 ```php
+<?php
 // Visitee
 interface Animal
 {
@@ -2257,6 +2315,7 @@ interface AnimalOperation
 然后我们有动物实施
 
 ```php
+<?php
 class Monkey implements Animal
 {
     public function shout()
@@ -2300,6 +2359,7 @@ class Dolphin implements Animal
 让我们实现我们的访客
 
 ```php
+<?php
 class Speak implements AnimalOperation
 {
     public function visitMonkey(Monkey $monkey)
@@ -2322,6 +2382,7 @@ class Speak implements AnimalOperation
 然后它可以用作
 
 ```php
+<?php
 $monkey = new Monkey();
 $lion = new Lion();
 $dolphin = new Dolphin();
@@ -2336,6 +2397,7 @@ $dolphin->accept($speak);   // Tuut tutt tuutt!
 我们可以通过为动物建立一个继承层次结构来做到这一点，但是每当我们不得不为动物添加新动作时我们就必须修改动物。但现在我们不必改变它们。例如，假设我们被要求向动物添加跳跃行为，我们可以通过创建新的访问者来添加它，即
 
 ```php
+<?php
 class Jump implements AnimalOperation
 {
     public function visitMonkey(Monkey $monkey)
@@ -2358,6 +2420,7 @@ class Jump implements AnimalOperation
 并用于使用
 
 ```php
+<?php
 $jump = new Jump();
 
 $monkey->accept($speak);   // Ooh oo aa aa!
@@ -2382,7 +2445,7 @@ $dolphin->accept($jump);   // Walked on water a little and disappeared
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/behavioral/visitor/visitor_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/visitor.lua)
 
-## 💡策略模式（Strategy）
+### 💡策略模式（Strategy）
 
 现实世界的例子
 
@@ -2401,6 +2464,7 @@ $dolphin->accept($jump);   // Walked on water a little and disappeared
 从上面翻译我们的例子。首先，我们有战略界面和不同的战略实施
 
 ```php
+<?php
 interface SortStrategy
 {
     public function sort(array $dataset): array;
@@ -2432,6 +2496,7 @@ class QuickSortStrategy implements SortStrategy
 然后我们的客户将使用任何策略
 
 ```php
+<?php
 class Sorter
 {
     protected $sorter;
@@ -2452,6 +2517,7 @@ class Sorter
 
 And it can be used as
 ```php
+<?php
 $dataset = [1, 5, 4, 3, 2, 8];
 
 $sorter = new Sorter(new BubbleSortStrategy());
@@ -2473,7 +2539,7 @@ $sorter->sort($dataset); // Output : Sorting using quick sort
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/behavioral/strategy/strategy_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/strategy.lua)
 
-## 💢状态模式（State）
+### 💢状态模式（State）
 
 现实世界的例子
 
@@ -2494,6 +2560,7 @@ $sorter->sort($dataset); // Output : Sorting using quick sort
 首先，我们有状态接口和一些状态实现
 
 ```php
+<?php
 interface WritingState
 {
     public function write(string $words);
@@ -2527,6 +2594,7 @@ class DefaultText implements WritingState
 然后我们有编辑
 
 ```php
+<?php
 class TextEditor
 {
     protected $state;
@@ -2551,6 +2619,7 @@ class TextEditor
 然后它可以用作
 
 ```php
+<?php
 $editor = new TextEditor(new DefaultText());
 
 $editor->type('First line');
@@ -2585,7 +2654,7 @@ $editor->type('Fifth line');
 + [JS-ES6](https://github.com/fbeline/design-patterns-JS/blob/master/src/behavioral/state/state_es6.js)
 + [Lua](https://github.com/woshihuo12/LuaDesignPattern/blob/master/state.lua)
 
-## 📒模板方法模式（Template Method）
+### 📒模板方法模式（Template Method）
 
 现实世界的例子
 
@@ -2613,6 +2682,7 @@ $editor->type('Fifth line');
 首先，我们有基类，它指定构建算法的骨架
 
 ```php
+<?php
 abstract class Builder
 {
 
@@ -2635,6 +2705,7 @@ abstract class Builder
 然后我们可以实现我们的实现
 
 ```php
+<?php
 class AndroidBuilder extends Builder
 {
     public function test()
@@ -2685,6 +2756,7 @@ class IosBuilder extends Builder
 然后它可以用作
 
 ```php
+<?php
 $androidBuilder = new AndroidBuilder();
 $androidBuilder->build();
 
