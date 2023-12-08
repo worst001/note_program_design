@@ -46,13 +46,13 @@ readme项目说明文档中，有如下图的标签
 
 <img src="./images/Capture.PNG" style="zoom:50%">
 
-这些标签是怎么来的呢？可以查阅[shields.io](shields.io)进行引用，其中，build pass等标签，很多都需要采用`travis CI 、Appvexyor CI或 Circle CI`进行运行检测 [^1]。
+这些标签是怎么来的呢？可以查阅[shields.io]()进行引用，其中，build pass等标签，很多都需要采用`travis CI 、Appvexyor CI或 Circle CI`进行运行检测 [^1]。
 
-那么我们如何给自己的readme.md添加标签呢？查阅[shields.io](shields.io) 网站各个图标怎么引用
+那么我们如何给自己的readme.md添加标签呢？查阅[shields.io]() 网站各个图标怎么引用
 
 #### :maple_leaf: shields.io中有动态的图标![brightgreen](https://img.shields.io/badge/-shields.io中有动态的图标-brightgreen)
 
-如下需要相应的平台支持,图标显示格式可以查阅[shields.io](shields.io) 
+如下需要相应的平台支持,图标显示格式可以查阅[shields.io]()
 
 ```
 twitter follow        /twitter/follow/:user?label=Follow
