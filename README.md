@@ -88,7 +88,7 @@
 
 + [Vim 自用笔记](Vim/Vim.md)
 + [Vim 手册](Vim/user_manual-2.4.0.pdf)
-+ [自用 Vim 配置备份](https://github.com/worst001/vim_0)
++ [自用 Vim 配置备份](https://github.com/worst001/nvim_0)
 
 #### 配套工具
 
