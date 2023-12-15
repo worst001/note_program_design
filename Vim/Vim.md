@@ -460,7 +460,7 @@ augroup END
 └── vimrc
 ```
 
-[Vim 配置仓库地址](https://github.com/worst001/vim_0)
+[Vim 配置仓库地址](https://github.com/worst001/nvim_0)
 
 ## 总结
 + 也不是说用vim其他开发工具就不要了，他有强大的近乎完美编辑功能。
