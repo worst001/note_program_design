@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 <!-- PROJECT SHIELDS -->
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -9,7 +10,39 @@
 
 <!-- PROJECT LOGO -->
 
-# 编辑与模式
+<!-- 项目LOGO -->
+<br />
+<div align="center">
+  <a href="http://mkdocs.grft.top">
+    <img src="https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/mkdocs/logo.png" alt="Logo" width="480" height="270">
+  </a>
+
+  <h3 align="center">编辑与模式</h3>
+
+  <p align="center">
+    <br />
+    <a href="http://mkdocs.grft.top/编辑与模式/"><strong>探索文档 »</strong></a>
+    <br />
+  </p>
+</div>
+
+<!-- 目录 -->
+<details>
+  <summary>目录</summary>
+  <ol>
+    <li><a href="#关于项目">关于项目</a></li>
+    <li><a href="#什么是程序编辑">什么是程序编辑</a></li>
+    <li><a href="#什么是设计模式">什么是设计模式</a></li>
+    <li><a href="#技术目录">技术目录</a></li>
+    <li><a href="#贡献">贡献</a></li>
+    <li><a href="#许可证">许可证</a></li>
+    <li><a href="#联系方式">联系方式</a></li>
+    <li><a href="#鸣谢">鸣谢</a></li>
+  </ol>
+</details>
+
+
+## 关于项目
 
 整理了程序设计中需要用到的编辑工具资料、笔记与手册
 
@@ -23,7 +56,8 @@
 
 - 访问入口：[http://mkdocs.grft.top](http://mkdocs.grft.top)
 
---------------------
+<p align="right">(<a href="#readme-top">回到顶部</a>)</p>
+
 
 ## 什么是程序编辑
 
@@ -36,7 +70,11 @@
 + Tmux - Linux 终端会话与设计的工具，与Shell、Vim结合能发挥强大的功能
 + Vim、Emacs - 轻量级且功能强大的源代码编辑器，其他常用的工具还有 Visual Studio Code, Sublime Text, Atom, Eclipse, IntelliJ IDEA, PyCharm, Xcode等
 
+<p align="right">(<a href="#readme-top">回到顶部</a>)</p>
+
+
 ## 什么是设计模式
+
 设计模式是软件工程中的一套被反复使用、大家公认的、最有效的解决特定问题的方案。设计模式以标准化的方式解决软件设计中经常遇到的问题，从而提高代码的复用性、可维护性和通信的清晰度。
 
 设计模式通常按照面向对象设计原则编写，像是单一职责原则、开闭原则、里氏替换原则等。学习并正确应用设计模式可以帮助开发者创建既灵活又可扩展的软件系统。
@@ -52,13 +90,13 @@
 #### 行为型模式
 特别关注对象之间的通信。例如：策略（Strategy）、观察者（Observer）、命令（Command）、备忘录（Memento）、迭代器（Iterator）、中介者（Mediator）、状态（State）和访问者（Visitor）模式。
 
---------------------
+<p align="right">(<a href="#readme-top">回到顶部</a>)</p>
 
-## 目录
+## 技术目录
 
-[目录](index.md)
+[目录与大纲](index.md)
 
-## Markdown
+### Markdown
 
 + [基本语法与用法](Markdown/README/README.md)
 + [表情emoji](Markdown/README/emoji.md)
@@ -66,23 +104,23 @@
 + [如何在Github上写出漂亮的README](Markdown/如何在github上写出漂亮的readme.md)
 + [mkdocs](https://www.mkdocs.org/getting-started/)
 
-## Latex
+### Latex
 
 + [Latex 自用脑图](https://www.yuque.com/hanwenhao-bs03y/tncnv7/iy0aay0hgghfhqgn?singleDoc#%20《Latex》)
 + [Latex 中文手册](https://albertyzp.github.io/2019/10/15/LaTex%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/#%E4%B8%80-latex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
 
 
-## Matlab
+### Matlab
 
 + [Matlab 官方手册](https://ww2.mathworks.cn/help/matlab/)
 
 
-## Tmux
+### Tmux
 
 + [Tmux](https://louiszhai.github.io/2017/09/30/tmux/)
 
 
-## Vim
+### Vim
 
 #### 自用配置
 
@@ -99,42 +137,56 @@
 + [Joshuto](https://github.com/kamiyaa/joshuto)
 
 
-## Emacs
+### Emacs
 
 + [SpaceEmacs](https://www.spacemacs.org/)
 + [Lisp](https://oneforalone.github.io/cl-cookbook-cn/#/)
 + [MELPA 中心](https://melpa.org/#/)
 
 
-## 设计模式
+### 设计模式
 
 + [为了人类的设计](设计模式/design-patterns-for-humans-cn/README.md)
 + [理论与详解](https://refactoringguru.cn/design-patterns/catalog)
 + [各语言模板总览](https://github.com/DovAmir/awesome-design-patterns)
 
 
--------------------
+<p align="right">(<a href="#readme-top">回到顶部</a>)</p>
+
+<!-- 贡献 -->
+
+## 贡献
+
+贡献是使开源社区成为一个如此令人惊叹的地方，以学习、激励和创造。您所做的任何贡献都将非常感谢。
+
+如果您对使这个项目变得更好有建议，请 fork 该仓库并创建 pull request。您也可以打开一个带有“enhancement”标签的问题。不要忘记给这个项目点个星！再次感谢！
+
+<p align="right">(<a href="#readme-top">返回顶部</a>)</p>
 
 
-## 版本控制
+<!-- 许可证 -->
+## 许可证
 
-该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
+根据 MIT 许可证进行分发。更多信息请参见 [LICENSE.txt](LICENSE)。
 
+<p align="right">(<a href="#readme-top">返回顶部</a>)</p>
 
-## 作者
+<!-- 联系方式 -->
+## 联系方式
 
-[小昊子](https://github.com/worst001)
+关注我: [小昊子](https://github.com/worst001)
 
-制做不易，如果有帮到你就请作者喝杯咖啡吧!
+博客地址: [http://mkdocs.grft.top](http://mkdocs.grft.top)
 
-![支付宝加微信](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%8A%A0%E5%BE%AE%E4%BF%A1.jpg)
+项目链接: [https://github.com/worst001/mkdocs_program_design](https://github.com/worst001/mkdocs_program_design)
 
-作者无聊时做的测试游戏，完全免费哦！ :kissing_closed_eyes:
+<p align="right">(<a href="#readme-top">返回顶部</a>)</p>
 
+## 鸣谢
 
-![公众号](https://xiyou-oss.oss-cn-shanghai.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8E%E6%94%AF%E4%BB%98/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%B0%8F.jpg)
+因为仓库与文档的数量比较大，有些借鉴资料忘了在`参考文档`部分提及原作者与原仓库，若有疏漏请告诉，我及时补上。
 
-## 参考资料
+所有引用的原资料都确认是开源认证，若有侵权请告知。
 
 [https://github.com/younghz/Markdown](https://github.com/younghz/Markdown)
 
@@ -164,12 +216,7 @@
 
 [https://github.com/woshihuo12/LuaDesignPattern](https://github.com/woshihuo12/LuaDesignPattern)
 
-
-### 写在最后的话
-
-因为仓库与文档的数量比较大，有些借鉴资料忘了在`参考文档`部分提及原作者与原仓库，若有疏漏请告诉，我及时补上。
-
-所有引用的原资料都确认是开源认证，若有侵权请告知。
+[https://openai.com/chatgpt](https://openai.com/chatgpt)
 
 
 <!-- links -->
